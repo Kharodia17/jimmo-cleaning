@@ -21,11 +21,11 @@ const testimonials = [
   },
   {
     quote:
-      "From our V&A Waterfront retail spaces to our executive boardrooms, Jimmo delivers a consistently pristine standard. Truly the best in the Western Cape.",
+      "From our Pretoria head office to our Midrand distribution centre, Jimmo delivers a consistently pristine standard. Truly the best in Gauteng.",
     name: "Liezel van der Merwe",
     title: "Operations Manager",
     company: "Harbour Point Holdings",
-    city: "V&A Waterfront, Cape Town",
+    city: "Midrand, Gauteng",
     initials: "LV",
     color: "bg-tertiary-fixed text-tertiary",
   },

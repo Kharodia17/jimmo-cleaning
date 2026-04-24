@@ -27,7 +27,7 @@ export default function ContactPage() {
           Let's curate your <span className="text-primary">perfect space.</span>
         </h1>
         <p className="font-body text-lg text-on-surface-variant leading-relaxed">
-          Serving Johannesburg, Pretoria, Cape Town and Durban — our team responds within 24 hours with a custom quote in ZAR. No obligation, no hidden costs.
+          Serving Johannesburg, Pretoria, the East Rand and the Vaal Triangle — our team responds within 24 hours with a custom quote. No obligation, no hidden costs.
         </p>
       </header>
 

@@ -27,7 +27,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center px-6 md:px-8 py-4 max-w-7xl mx-auto">
           <Link
             to="/"
-            className="text-xl md:text-2xl font-bold text-cyan-800 font-headline tracking-tight"
+            className="text-xl md:text-2xl font-bold text-[#005B66] font-headline tracking-tight"
           >
             Jimmo Cleaning Services
           </Link>
@@ -41,8 +41,8 @@ export default function Navbar() {
                 end={to === '/'}
                 className={({ isActive }) =>
                   isActive
-                    ? 'text-cyan-700 font-bold border-b-2 border-cyan-700 pb-1 font-headline'
-                    : 'text-slate-600 font-medium hover:text-cyan-600 transition-colors font-headline'
+                    ? 'text-[#007A87] font-bold border-b-2 border-[#007A87] pb-1 font-headline'
+                    : 'text-slate-600 font-medium hover:text-[#009BAA] transition-colors font-headline'
                 }
               >
                 {label}
@@ -98,7 +98,7 @@ export default function Navbar() {
         }`}
       >
         <div className="flex items-center justify-between px-6 py-5 border-b border-surface-container-high">
-          <span className="text-lg font-bold text-cyan-800 font-headline">Jimmo</span>
+          <span className="text-lg font-bold text-[#005B66] font-headline">Jimmo</span>
           <button
             onClick={() => setDrawerOpen(false)}
             className="p-1.5 rounded-xl hover:bg-surface-container-low transition-colors"

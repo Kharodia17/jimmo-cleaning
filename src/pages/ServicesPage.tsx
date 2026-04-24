@@ -99,7 +99,7 @@ export default function ServicesPage() {
             <div className="md:col-span-7 space-y-8">
               <h2 className="text-4xl font-headline font-bold text-primary">Commercial Cleaning</h2>
               <p className="text-on-surface-variant leading-relaxed text-lg font-body">
-                Elevate your professional image with a workplace that inspires confidence. Tailored for Sandton office parks, Cape Town business districts, and Durban's uMhlanga Ridge commercial hub.
+                Elevate your professional image with a workplace that inspires confidence. Tailored for Sandton office parks, Pretoria's business districts, and East Rand commercial hubs.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {[
@@ -156,7 +156,7 @@ export default function ServicesPage() {
               <span className="material-symbols-outlined text-4xl mb-4">window</span>
               <h4 className="text-xl font-bold mb-2">High-Rise Window Care</h4>
               <p className="text-primary-fixed-dim text-sm">
-                Abseiling teams certified for Sandton's skyscrapers and Cape Town's high-rise commercial towers.
+                Abseiling teams certified for Sandton's skyscrapers and Johannesburg's high-rise commercial towers.
               </p>
             </div>
 
@@ -196,7 +196,7 @@ export default function ServicesPage() {
               Ready for a Pristine Transformation?
             </h2>
             <p className="text-primary-fixed font-body text-lg max-w-2xl mx-auto">
-              Join hundreds of South African businesses that trust Jimmo for their most critical cleaning needs. Get a custom quote in ZAR within 24 hours.
+              Join hundreds of Gauteng businesses that trust Jimmo for their most critical cleaning needs. Get a custom quote within 24 hours.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <Link to="/contact" className="bg-white text-primary px-10 py-4 rounded-2xl font-label font-bold text-lg hover:scale-105 transition-transform shadow-xl">

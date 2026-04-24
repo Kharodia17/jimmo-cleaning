@@ -2,19 +2,18 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Testimonials from '../components/Testimonials'
 
-const SA_CITIES = ['Johannesburg', 'Pretoria', 'Cape Town', 'Durban']
+const SA_CITIES = ['Johannesburg', 'Pretoria', 'East Rand', 'Vaal Triangle']
 
 const stats = [
-  { value: '15+', label: 'Years in SA' },
-  { value: '3', label: 'Provinces Served' },
-  { value: '500+', label: 'SA Businesses' },
-  { value: '50+', label: 'Specialists' },
+  { value: '15+', label: 'Years in Business' },
+  { value: '100%', label: 'Gauteng Coverage' },
+  { value: '500+', label: 'Businesses Served' },
+  { value: '50+', label: 'Team Members' },
 ]
 
 const trustBadges = [
   { icon: 'verified', text: 'BEE Level 1 Contributor' },
   { icon: 'workspace_premium', text: 'ISO 9001 Certified' },
-  { icon: 'shield', text: 'Fully Insured' },
   { icon: 'eco', text: 'Eco-Conscious' },
 ]
 
@@ -61,7 +60,7 @@ export default function HomePage() {
             </h1>
 
             <p className="text-lg md:text-xl text-on-surface-variant max-w-xl font-body leading-relaxed">
-              South Africa's premier commercial cleaning partner — serving Johannesburg, Pretoria, Cape Town and Durban with hospitality-grade standards your clients will notice.
+              Gauteng's premier commercial cleaning partner — serving Johannesburg, Pretoria and the East Rand with hospitality-grade standards your clients will notice.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -136,7 +135,7 @@ export default function HomePage() {
               <span className="material-symbols-outlined text-primary text-4xl mb-6 block">corporate_fare</span>
               <h4 className="text-3xl font-headline font-bold mb-4">Commercial Excellence</h4>
               <p className="text-on-surface-variant max-w-md mb-6">
-                Premium janitorial services for corporate parks, high-end retail, and luxury offices across Sandton, Rosebank, and the V&A Waterfront.
+                Premium janitorial services for corporate parks, high-end retail, and luxury offices across Sandton, Rosebank, and Midrand.
               </p>
               <ul className="space-y-3 font-label text-sm text-on-surface font-medium">
                 {['After-Hours Discreet Maintenance', 'Eco-Conscious Disinfection', 'High-Traffic Surface Care'].map((item) => (
@@ -190,18 +189,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Service Cities Strip */}
+      {/* Service Cities Strip — Gauteng only */}
       <section className="bg-on-surface py-16 px-6 md:px-8">
         <div className="max-w-7xl mx-auto">
           <p className="text-center font-label text-xs font-bold uppercase tracking-[0.3em] text-inverse-on-surface/60 mb-10">
-            Serving Major SA Cities
+            Serving All of Gauteng
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { city: 'Johannesburg', areas: 'Sandton · Rosebank · Midrand · East Rand', icon: 'location_city' },
+              { city: 'Johannesburg', areas: 'Sandton · Rosebank · Midrand · Fourways', icon: 'location_city' },
               { city: 'Pretoria', areas: 'Menlyn · Brooklyn · Centurion · Hatfield', icon: 'account_balance' },
-              { city: 'Cape Town', areas: 'V&A Waterfront · Century City · Bellville', icon: 'sailing' },
-              { city: 'Durban', areas: 'uMhlanga · Umgeni · Berea · Point', icon: 'beach_access' },
+              { city: 'East Rand', areas: 'Germiston · Boksburg · Ekurhuleni · Brakpan', icon: 'factory' },
+              { city: 'Vaal Triangle', areas: 'Vanderbijlpark · Vereeniging · Sasolburg', icon: 'water' },
             ].map(({ city, areas, icon }) => (
               <div key={city} className="text-center space-y-3">
                 <div className="w-12 h-12 rounded-xl bg-inverse-on-surface/10 flex items-center justify-center mx-auto">
@@ -215,28 +214,36 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
+      {/* Why Choose Us — The Jimmo Standard */}
       <section className="bg-surface-container-lowest py-24 px-6 md:px-8">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
           <div className="w-full lg:w-1/2 grid grid-cols-2 gap-4">
-            <img className="rounded-2xl w-full aspect-square object-cover mt-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzvqDzPni3W_787_7QJ7G0yT0dwCWg5CKUS8lW07o1y-49tAMLWKvMlupxwkjpIuJg3dGv_53hs9pkPLsywQGimR7pQ-Vfd4Y6SU7vfQwhKBLLX0ng52GSAWx2rqFZlvD4V9-ZyeYkkQgzcZWGAw0Uq6EzpxLpNUrroXzgNkIFaMenCDg6UvsCBUFcmrRyRbVcgMG7F7_FCdVqLy36QP-uSsQmvU5CfpIDVcLJhJMMT096v7lYHapVk9pSyW9ZqCVHZlJhyGfAG5Y" alt="Professional cleaner" />
-            <img className="rounded-2xl w-full aspect-square object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK7R6KVzsOpZskrpD1_dqhDXYU_JMeQkClWkVwkLS5SUgOstODDuNLPfmkee9LCIynCIS13zOhIWjNCQKJCeqhBVP-PVHeL7_6Zws9jEcVzIylDH6CLKwhxaCD76zIb27G01fmKZDx1nYnvHr5Tr6ElCQR1KGisLWS3IeH3i2hst38Fw0PDNM76HvX2QBZ_8wKIGDvq7CpO--ptN5fyI6Gqnpw_0-lx9dsDk_b6Sba7bIpYehAhWRJdDKi-2CSKavVj9crMKrdPyDsC8oM" alt="Detail cleaning" />
+            <img
+              className="rounded-2xl w-full aspect-square object-cover mt-8"
+              src="https://images.pexels.com/photos/6195950/pexels-photo-6195950.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="Professional cleaner"
+            />
+            <img
+              className="rounded-2xl w-full aspect-square object-cover"
+              src="https://images.pexels.com/photos/4108731/pexels-photo-4108731.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="Detail cleaning"
+            />
           </div>
 
           <div className="w-full lg:w-1/2 space-y-10">
             <div>
               <h2 className="text-sm font-label font-bold text-primary uppercase tracking-[0.2em] mb-4">The Jimmo Standard</h2>
-              <h3 className="text-4xl font-headline font-bold text-on-surface mb-6">Why SA's Top Businesses Trust Us</h3>
+              <h3 className="text-4xl font-headline font-bold text-on-surface mb-6">Why Gauteng's Top Businesses Trust Us</h3>
               <p className="text-on-surface-variant text-lg leading-relaxed">
-                Over 15 years serving South Africa's commercial landscape has made us the preferred partner for organisations that treat cleanliness as a core part of their brand.
+                Over 15 years serving Gauteng's commercial landscape has made us the preferred partner for organisations that treat cleanliness as a core part of their brand.
               </p>
             </div>
 
             <div className="space-y-8">
               {[
-                { icon: 'groups', bg: 'bg-primary-fixed', color: 'text-primary', title: 'Vetted SA Specialists', desc: 'Every team member passes PSIRA-standard background checks and 100+ hours of equipment training.' },
+                { icon: 'groups', bg: 'bg-primary-fixed', color: 'text-primary', title: 'Trained & Certified Teams', desc: 'Every team member is rigorously trained, background-checked, and equipped with professional-grade cleaning equipment.' },
                 { icon: 'update', bg: 'bg-secondary-fixed', color: 'text-secondary', title: 'Unmatched Reliability', desc: 'Real-time reporting and quality assurance checks after every single service visit, no exceptions.' },
-                { icon: 'verified_user', bg: 'bg-tertiary-fixed', color: 'text-tertiary', title: 'Fully Insured & Compliant', desc: 'Comprehensive liability cover, BEE Level 1 compliant, and registered with the NHBRC.' },
+                { icon: 'verified_user', bg: 'bg-tertiary-fixed', color: 'text-tertiary', title: 'BEE Level 1 & OHS Compliant', desc: 'Proudly B-BBEE Level 1 certified and fully compliant with the Occupational Health and Safety Act.' },
               ].map(({ icon, bg, color, title, desc }) => (
                 <div key={title} className="flex gap-6">
                   <div className={`flex-shrink-0 w-12 h-12 rounded-xl ${bg} flex items-center justify-center`}>
@@ -265,7 +272,7 @@ export default function HomePage() {
               Ready for a Pristine Space?
             </h2>
             <p className="text-primary-fixed text-lg md:text-xl max-w-2xl mb-10">
-              Get a transparent, no-obligation quote in ZAR — tailored to your facility's specific needs and delivered within 24 hours.
+              Get a transparent, no-obligation quote — tailored to your facility's specific needs and delivered within 24 hours.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 w-full justify-center max-w-lg">
               <input
