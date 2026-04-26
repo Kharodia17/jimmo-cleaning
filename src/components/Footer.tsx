@@ -73,7 +73,7 @@ export default function Footer() {
           <p>P.O. Box 4615, Vanderbijlpark · Gauteng, South Africa</p>
         </div>
         <div className="flex items-center gap-2 font-label text-xs font-semibold">
-          <span className="px-2 py-1 rounded bg-secondary-container text-on-secondary-container font-bold">B-BBEE Level 1</span>
+          <span className="px-2 py-1 rounded bg-secondary-container text-on-secondary-container font-bold">15+ Yrs Experience</span>
           <span className="text-slate-400">·</span>
           <div className="flex items-center gap-1 text-[#007A87]">
             <span className="material-symbols-outlined text-sm">language</span>

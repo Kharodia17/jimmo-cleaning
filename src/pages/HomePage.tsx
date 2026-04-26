@@ -12,8 +12,8 @@ const stats = [
 ]
 
 const trustBadges = [
-  { icon: 'verified', text: 'BEE Level 1 Contributor' },
-  { icon: 'workspace_premium', text: 'ISO 9001 Certified' },
+  { icon: 'verified', text: '15+ Years Industry Experience' },
+  { icon: 'schedule', text: '24/7 Emergency Response' },
   { icon: 'eco', text: 'Eco-Conscious' },
 ]
 
@@ -241,9 +241,9 @@ export default function HomePage() {
 
             <div className="space-y-8">
               {[
-                { icon: 'groups', bg: 'bg-primary-fixed', color: 'text-primary', title: 'Trained & Certified Teams', desc: 'Every team member is rigorously trained, background-checked, and equipped with professional-grade cleaning equipment.' },
+                { icon: 'groups', bg: 'bg-primary-fixed', color: 'text-primary', title: 'Trained & Competent Teams', desc: 'Every team member is rigorously trained, background-checked, and equipped with professional-grade cleaning equipment.' },
                 { icon: 'update', bg: 'bg-secondary-fixed', color: 'text-secondary', title: 'Unmatched Reliability', desc: 'Real-time reporting and quality assurance checks after every single service visit, no exceptions.' },
-                { icon: 'verified_user', bg: 'bg-tertiary-fixed', color: 'text-tertiary', title: 'BEE Level 1 & OHS Compliant', desc: 'Proudly B-BBEE Level 1 certified and fully compliant with the Occupational Health and Safety Act.' },
+                { icon: 'verified_user', bg: 'bg-tertiary-fixed', color: 'text-tertiary', title: '15 Years of Proven Excellence', desc: 'Over a decade and a half serving Gauteng\'s most demanding commercial environments — our track record speaks for itself.' },
               ].map(({ icon, bg, color, title, desc }) => (
                 <div key={title} className="flex gap-6">
                   <div className={`flex-shrink-0 w-12 h-12 rounded-xl ${bg} flex items-center justify-center`}>

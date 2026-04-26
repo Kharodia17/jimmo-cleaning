@@ -17,7 +17,7 @@ export default function ServicesPage() {
               From heavy-duty industrial sites in Germiston to sophisticated corporate headquarters in Sandton — we deliver an uncompromising hygiene standard across South Africa.
             </p>
             <div className="flex flex-wrap gap-3">
-              {['OHS Compliant', 'BEE Level 1', 'SABS Aligned', 'Eco-Friendly'].map((badge) => (
+              {['OHS Compliant', '15+ Yrs Experience', 'SABS Aligned', 'Eco-Friendly'].map((badge) => (
                 <span key={badge} className="px-3 py-1.5 rounded-full bg-primary-fixed text-primary font-label text-xs font-bold uppercase tracking-wide">
                   {badge}
                 </span>
@@ -39,8 +39,8 @@ export default function ServicesPage() {
                   <span className="material-symbols-outlined text-white">verified</span>
                 </div>
                 <div>
-                  <p className="font-headline font-bold text-primary">ISO 9001 Certified</p>
-                  <p className="text-xs text-on-surface-variant font-label">Safety &amp; Quality Assured</p>
+                  <p className="font-headline font-bold text-primary">15+ Years Experience</p>
+                  <p className="text-xs text-on-surface-variant font-label">Trusted Gauteng Specialists</p>
                 </div>
               </div>
             </div>

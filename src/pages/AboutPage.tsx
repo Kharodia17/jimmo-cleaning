@@ -34,9 +34,9 @@ export default function AboutPage() {
       <div className="bg-secondary-container/40 border-y border-secondary-container py-5 px-6 md:px-8">
         <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-x-10 gap-y-2">
           {[
-            { icon: 'diversity_3', text: 'B-BBEE Level 1 Contributor' },
-            { icon: 'workspace_premium', text: 'ISO 9001:2015 Certified' },
+            { icon: 'workspace_premium', text: '15+ Years Industry Experience' },
             { icon: 'gavel', text: 'OHS Act Compliant' },
+            { icon: 'eco', text: 'Eco-Conscious Practices' },
             { icon: 'flag', text: 'Proudly South African' },
           ].map(({ icon, text }) => (
             <div key={text} className="flex items-center gap-2 font-label text-sm font-semibold text-on-secondary-container">
