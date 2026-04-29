@@ -4,6 +4,15 @@ import Testimonials from '../components/Testimonials'
 
 const SA_CITIES = ['Johannesburg', 'Pretoria', 'East Rand', 'Vaal Triangle']
 
+const galleryImages = [
+  '/gallery/IMG-20260409-WA0045.jpg',
+  '/gallery/IMG-20260409-WA0046.jpg',
+  '/gallery/IMG-20260409-WA0050.jpg',
+  '/gallery/IMG-20260409-WA0051.jpg',
+  '/gallery/IMG-20260409-WA0052.jpg',
+  '/gallery/IMG-20260409-WA0054.jpg',
+]
+
 const stats = [
   { value: '15+', label: 'Years in Business' },
   { value: '100%', label: 'Gauteng Coverage' },
@@ -186,6 +195,38 @@ export default function HomePage() {
               <span className="material-symbols-outlined text-6xl text-secondary opacity-40">eco</span>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Our Work Gallery */}
+      <section className="py-24 px-6 md:px-8 max-w-7xl mx-auto">
+        <div className="mb-12 max-w-2xl">
+          <h2 className="text-sm font-label font-bold text-secondary uppercase tracking-[0.2em] mb-4">Portfolio</h2>
+          <h3 className="text-4xl md:text-5xl font-headline font-bold text-on-surface tracking-tight mb-4">
+            See the Jimmo Difference
+          </h3>
+          <p className="text-on-surface-variant text-lg leading-relaxed">
+            Real spaces. Real results. Every photo is from an actual Jimmo job site across Gauteng.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+          {galleryImages.map((src, i) => (
+            <a
+              key={i}
+              href={src}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block rounded-2xl overflow-hidden aspect-square group shadow-sm hover:shadow-xl transition-shadow duration-300"
+            >
+              <img
+                src={src}
+                alt={`Jimmo cleaning work ${i + 1}`}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            </a>
+          ))}
         </div>
       </section>
 
