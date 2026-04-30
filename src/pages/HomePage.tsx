@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Testimonials from '../components/Testimonials'
+import { useScrollReveal } from '../hooks/useScrollReveal'
 
 const SA_CITIES = ['Johannesburg', 'Pretoria', 'East Rand', 'Vaal Triangle']
 
@@ -28,6 +29,7 @@ const trustBadges = [
 
 export default function HomePage() {
   const [email, setEmail] = useState('')
+  useScrollReveal()
 
   return (
     <main className="pt-20">
@@ -56,7 +58,7 @@ export default function HomePage() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-16 lg:py-24">
-          <div className="space-y-8">
+          <div className="space-y-8 hero-left">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-secondary-container text-on-secondary-container font-label text-sm font-semibold tracking-wide uppercase">
               <span className="material-symbols-outlined text-sm mr-2" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
               Proudly South African
@@ -100,7 +102,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="hidden lg:block relative">
+          <div className="hidden lg:block relative hero-right">
             <div className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-2xl transform translate-x-4 -translate-y-4">
               <img
                 className="w-full aspect-[4/5] object-cover"
@@ -120,8 +122,8 @@ export default function HomePage() {
       {/* Stats Strip */}
       <section className="bg-surface-container-lowest border-y border-surface-container-high">
         <div className="max-w-7xl mx-auto px-6 md:px-8 py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map(({ value, label }) => (
-            <div key={label} className="text-center">
+          {stats.map(({ value, label }, i) => (
+            <div key={label} className={`text-center reveal delay-${i * 100 + 100}`}>
               <p className="text-4xl md:text-5xl font-headline font-extrabold text-primary mb-1">{value}</p>
               <p className="text-on-surface-variant font-label text-sm uppercase tracking-widest">{label}</p>
             </div>
@@ -131,7 +133,7 @@ export default function HomePage() {
 
       {/* Services Bento Grid */}
       <section className="py-24 px-6 md:px-8 max-w-7xl mx-auto">
-        <div className="mb-16 text-left max-w-2xl">
+        <div className="mb-16 text-left max-w-2xl reveal">
           <h2 className="text-sm font-label font-bold text-secondary uppercase tracking-[0.2em] mb-4">Our Expertise</h2>
           <h3 className="text-4xl md:text-5xl font-headline font-bold text-on-surface tracking-tight">
             Specialised Cleaning Solutions
@@ -139,7 +141,7 @@ export default function HomePage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-          <div className="md:col-span-8 bg-surface-container-low rounded-2xl p-8 md:p-10 flex flex-col justify-between group hover:bg-surface-container-highest transition-colors duration-500 overflow-hidden relative min-h-[300px]">
+          <div className="md:col-span-8 reveal delay-100 bg-surface-container-low rounded-2xl p-8 md:p-10 flex flex-col justify-between group hover:bg-surface-container-highest transition-colors duration-500 overflow-hidden relative min-h-[300px]">
             <div className="relative z-10">
               <span className="material-symbols-outlined text-primary text-4xl mb-6 block">corporate_fare</span>
               <h4 className="text-3xl font-headline font-bold mb-4">Commercial Excellence</h4>
@@ -160,7 +162,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="md:col-span-4 bg-primary text-on-primary rounded-2xl p-8 md:p-10 flex flex-col justify-between relative overflow-hidden min-h-[280px]">
+          <div className="md:col-span-4 reveal delay-200 bg-primary text-on-primary rounded-2xl p-8 md:p-10 flex flex-col justify-between relative overflow-hidden min-h-[280px]">
             <div className="relative z-10">
               <span className="material-symbols-outlined text-primary-container text-4xl mb-6 block">factory</span>
               <h4 className="text-2xl font-headline font-bold mb-4 text-white">Industrial Precision</h4>
@@ -176,7 +178,7 @@ export default function HomePage() {
             <div className="absolute -right-12 -bottom-12 w-48 h-48 bg-tertiary-container/20 rounded-full blur-2xl" />
           </div>
 
-          <div className="md:col-span-4 bg-secondary-container rounded-2xl p-8 flex flex-col">
+          <div className="md:col-span-4 reveal delay-300 bg-secondary-container rounded-2xl p-8 flex flex-col">
             <span className="material-symbols-outlined text-on-secondary-container text-3xl mb-4">sanitizer</span>
             <h4 className="text-xl font-headline font-bold text-on-secondary-container mb-2">Specialised Care</h4>
             <p className="text-on-secondary-fixed-variant text-sm font-body">
@@ -184,7 +186,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="md:col-span-8 bg-surface-container-high rounded-2xl p-8 flex items-center justify-between group overflow-hidden">
+          <div className="md:col-span-8 reveal delay-400 bg-surface-container-high rounded-2xl p-8 flex items-center justify-between group overflow-hidden">
             <div className="max-w-md">
               <h4 className="text-xl font-headline font-bold mb-2">Sustainable Practices</h4>
               <p className="text-on-surface-variant text-sm">
@@ -200,7 +202,7 @@ export default function HomePage() {
 
       {/* Our Work Gallery */}
       <section className="py-24 px-6 md:px-8 max-w-7xl mx-auto">
-        <div className="mb-12 max-w-2xl">
+        <div className="mb-12 max-w-2xl reveal">
           <h2 className="text-sm font-label font-bold text-secondary uppercase tracking-[0.2em] mb-4">Portfolio</h2>
           <h3 className="text-4xl md:text-5xl font-headline font-bold text-on-surface tracking-tight mb-4">
             See the Jimmo Difference
@@ -217,7 +219,7 @@ export default function HomePage() {
               href={src}
               target="_blank"
               rel="noopener noreferrer"
-              className="block rounded-2xl overflow-hidden aspect-square group shadow-sm hover:shadow-xl transition-shadow duration-300"
+              className={`reveal-scale delay-${Math.min(i * 100, 500)} block rounded-2xl overflow-hidden aspect-square group shadow-sm hover:shadow-xl transition-shadow duration-300`}
             >
               <img
                 src={src}
@@ -242,8 +244,8 @@ export default function HomePage() {
               { city: 'Pretoria', areas: 'Menlyn · Brooklyn · Centurion · Hatfield', icon: 'account_balance' },
               { city: 'East Rand', areas: 'Germiston · Boksburg · Ekurhuleni · Brakpan', icon: 'factory' },
               { city: 'Vaal Triangle', areas: 'Vanderbijlpark · Vereeniging · Sasolburg', icon: 'water' },
-            ].map(({ city, areas, icon }) => (
-              <div key={city} className="text-center space-y-3">
+            ].map(({ city, areas, icon }, i) => (
+              <div key={city} className={`text-center space-y-3 reveal delay-${i * 100 + 100}`}>
                 <div className="w-12 h-12 rounded-xl bg-inverse-on-surface/10 flex items-center justify-center mx-auto">
                   <span className="material-symbols-outlined text-inverse-on-surface/70 text-2xl">{icon}</span>
                 </div>
@@ -258,7 +260,7 @@ export default function HomePage() {
       {/* Why Choose Us — The Jimmo Standard */}
       <section className="bg-surface-container-lowest py-24 px-6 md:px-8">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
-          <div className="w-full lg:w-1/2 grid grid-cols-2 gap-4">
+          <div className="w-full lg:w-1/2 grid grid-cols-2 gap-4 reveal-left">
             <img
               className="rounded-2xl w-full aspect-square object-cover mt-8"
               src="https://images.pexels.com/photos/6195950/pexels-photo-6195950.jpeg?auto=compress&cs=tinysrgb&w=600"
@@ -271,7 +273,7 @@ export default function HomePage() {
             />
           </div>
 
-          <div className="w-full lg:w-1/2 space-y-10">
+          <div className="w-full lg:w-1/2 space-y-10 reveal-right delay-200">
             <div>
               <h2 className="text-sm font-label font-bold text-primary uppercase tracking-[0.2em] mb-4">The Jimmo Standard</h2>
               <h3 className="text-4xl font-headline font-bold text-on-surface mb-6">Why Gauteng's Top Businesses Trust Us</h3>
@@ -306,7 +308,7 @@ export default function HomePage() {
 
       {/* CTA Section */}
       <section className="py-24 px-6 md:px-8">
-        <div className="max-w-7xl mx-auto bg-primary rounded-[3rem] overflow-hidden relative">
+        <div className="max-w-7xl mx-auto bg-primary rounded-[3rem] overflow-hidden relative reveal-scale">
           <div className="absolute inset-0 bg-gradient-to-br from-primary to-tertiary opacity-90" />
           <div className="relative z-10 px-8 md:px-12 py-20 flex flex-col items-center text-center">
             <h2 className="text-4xl md:text-6xl font-headline font-extrabold text-white mb-6 tracking-tight">

@@ -25,12 +25,14 @@ export default function Navbar() {
     <>
       <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-sm">
         <div className="flex justify-between items-center px-6 md:px-8 py-4 max-w-7xl mx-auto">
-          <Link to="/" className="flex items-center">
-            <img
-              src="/logo.jpg"
-              alt="Jimmo Cleaning Services"
-              className="h-12 w-auto object-contain"
-            />
+          <Link to="/" className="flex items-center gap-2 group">
+            <span className="font-headline font-extrabold text-2xl tracking-widest text-[#007A87] group-hover:text-[#005B66] transition-colors duration-200">
+              JIMMO
+            </span>
+            <span className="hidden sm:flex flex-col font-label text-[9px] font-bold uppercase tracking-[0.18em] text-slate-400 leading-tight pt-0.5">
+              <span>Cleaning</span>
+              <span>Services</span>
+            </span>
           </Link>
 
           {/* Desktop nav */}
@@ -99,7 +101,7 @@ export default function Navbar() {
         }`}
       >
         <div className="flex items-center justify-between px-6 py-5 border-b border-surface-container-high">
-          <img src="/logo.jpg" alt="Jimmo" className="h-10 w-auto object-contain" />
+          <span className="font-headline font-extrabold text-xl tracking-widest text-[#007A87]">JIMMO</span>
           <button
             onClick={() => setDrawerOpen(false)}
             className="p-1.5 rounded-xl hover:bg-surface-container-low transition-colors"
