@@ -9,7 +9,7 @@ export default function Footer() {
 
         {/* Brand col */}
         <div className="space-y-6 md:col-span-1">
-          <div className="text-lg font-bold text-[#005B66] font-headline">Jimmo Cleaning Services</div>
+          <img src="/logo.jpg" alt="Jimmo Cleaning Services" className="h-20 w-auto object-contain" />
           <p className="text-slate-500 font-label text-sm leading-relaxed">
             Gauteng's premier commercial cleaning partner — raising the bar for hygiene and professionalism across Johannesburg, Pretoria and the East Rand since 2015.
           </p>
