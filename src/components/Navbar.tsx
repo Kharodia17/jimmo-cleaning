@@ -29,7 +29,7 @@ export default function Navbar() {
             <span className="font-headline font-extrabold text-2xl tracking-widest text-[#007A87] group-hover:text-[#005B66] transition-colors duration-200">
               JIMMO
             </span>
-            <span className="hidden sm:flex flex-col font-label text-[9px] font-bold uppercase tracking-[0.18em] text-slate-400 leading-tight pt-0.5">
+            <span className="flex flex-col font-label text-[9px] font-bold uppercase tracking-[0.18em] text-slate-400 leading-tight pt-0.5">
               <span>Cleaning</span>
               <span>Services</span>
             </span>
@@ -101,7 +101,13 @@ export default function Navbar() {
         }`}
       >
         <div className="flex items-center justify-between px-6 py-5 border-b border-surface-container-high">
-          <span className="font-headline font-extrabold text-xl tracking-widest text-[#007A87]">JIMMO</span>
+          <div className="flex items-center gap-2">
+            <span className="font-headline font-extrabold text-xl tracking-widest text-[#007A87]">JIMMO</span>
+            <span className="flex flex-col font-label text-[9px] font-bold uppercase tracking-[0.18em] text-slate-400 leading-tight pt-0.5">
+              <span>Cleaning</span>
+              <span>Services</span>
+            </span>
+          </div>
           <button
             onClick={() => setDrawerOpen(false)}
             className="p-1.5 rounded-xl hover:bg-surface-container-low transition-colors"
