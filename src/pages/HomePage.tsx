@@ -259,21 +259,8 @@ export default function HomePage() {
 
       {/* Why Choose Us — The Jimmo Standard */}
       <section className="bg-surface-container-lowest py-24 px-6 md:px-8">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
-          <div className="w-full lg:w-1/2 grid grid-cols-2 gap-4 reveal-left">
-            <img
-              className="rounded-2xl w-full aspect-square object-cover mt-8"
-              src="https://images.pexels.com/photos/6195950/pexels-photo-6195950.jpeg?auto=compress&cs=tinysrgb&w=600"
-              alt="Professional cleaner"
-            />
-            <img
-              className="rounded-2xl w-full aspect-square object-cover"
-              src="https://images.pexels.com/photos/4108731/pexels-photo-4108731.jpeg?auto=compress&cs=tinysrgb&w=600"
-              alt="Detail cleaning"
-            />
-          </div>
-
-          <div className="w-full lg:w-1/2 space-y-10 reveal-right delay-200">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-3xl mx-auto space-y-10 reveal">
             <div>
               <h2 className="text-sm font-label font-bold text-primary uppercase tracking-[0.2em] mb-4">The Jimmo Standard</h2>
               <h3 className="text-4xl font-headline font-bold text-on-surface mb-6">Why Gauteng's Top Businesses Trust Us</h3>
