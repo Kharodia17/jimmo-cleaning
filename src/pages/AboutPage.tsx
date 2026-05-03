@@ -120,7 +120,7 @@ export default function AboutPage() {
                     <span className="material-symbols-outlined text-on-secondary-container">groups</span>
                   </div>
                   <div>
-                    <p className="text-xl font-bold">50+</p>
+                    <p className="text-xl font-bold">10+</p>
                     <p className="text-xs text-on-surface-variant font-medium">South African Staff</p>
                   </div>
                 </div>
