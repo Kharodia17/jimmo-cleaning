@@ -1,6 +1,8 @@
 import CTASection from '../components/CTASection'
+import { useScrollReveal } from '../hooks/useScrollReveal'
 
 export default function AboutPage() {
+  useScrollReveal()
   return (
     <main className="pt-24">
       {/* Hero */}
