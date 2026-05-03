@@ -93,7 +93,7 @@ export default function Footer() {
 
         {/* Legal */}
         <div className="md:col-span-3 space-y-6">
-          <h5 className="font-headline font-bold text-white text-sm uppercase tracking-widest">Legal</h5>
+          <h5 className="font-headline font-bold text-white text-sm uppercase tracking-widest">Compliance</h5>
           <nav className="flex flex-col space-y-3 font-label text-sm">
             <a href="#" className="text-slate-400 hover:text-[#009BAA] transition-colors">Privacy Policy</a>
             <a href="#" className="text-slate-400 hover:text-[#009BAA] transition-colors">Terms of Service</a>
@@ -123,11 +123,23 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="max-w-7xl mx-auto px-8 py-6 flex flex-col sm:flex-row justify-between items-center gap-3">
         <p className="font-label text-xs text-slate-500">
-          © 2025 Jimmo Cleaning Services (Pty) Ltd. All rights reserved.
+          © {new Date().getFullYear()} Jimmo Cleaning Services (Pty) Ltd. All rights reserved.
         </p>
-        <p className="font-label text-xs text-slate-600">
-          P.O. Box 4615, Vanderbijlpark · Gauteng, South Africa
-        </p>
+        <div className="flex items-center gap-3 font-label text-xs text-slate-600">
+          <span>P.O. Box 4615, Vanderbijlpark</span>
+          <span>·</span>
+          <span>
+            Developed by{' '}
+            <a
+              href="https://smarkit.co.za"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#009BAA] hover:text-white transition-colors font-semibold"
+            >
+              SMARKIT
+            </a>
+          </span>
+        </div>
       </div>
     </footer>
   )

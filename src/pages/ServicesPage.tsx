@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import CTASection from '../components/CTASection'
 
 export default function ServicesPage() {
   return (
@@ -186,35 +186,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-24 px-6 md:px-8">
-        <div className="max-w-5xl mx-auto rounded-3xl overflow-hidden bg-primary relative p-10 md:p-20 text-center">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-primary-container/20 rounded-full blur-3xl -mr-20 -mt-20" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-tertiary-container/20 rounded-full blur-3xl -ml-20 -mb-20" />
-          <div className="relative z-10 space-y-8">
-            <h2 className="text-4xl md:text-5xl font-headline font-bold text-white tracking-tight">
-              Ready for a Pristine Transformation?
-            </h2>
-            <p className="text-primary-fixed font-body text-lg max-w-2xl mx-auto">
-              Join hundreds of Gauteng businesses that trust Jimmo for their most critical cleaning needs. Get a custom quote within 24 hours.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Link to="/contact" className="bg-white text-primary px-10 py-4 rounded-2xl font-label font-bold text-lg hover:scale-105 transition-transform shadow-xl">
-                Request a Free Quote
-              </Link>
-              <a
-                href="https://wa.me/27795745177?text=Hi%20Jimmo!%20I%27d%20like%20a%20quote%20for%20cleaning%20services."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-[#25D366] text-white px-10 py-4 rounded-2xl font-label font-bold text-lg hover:bg-[#1ebe5d] transition-colors"
-              >
-                <svg viewBox="0 0 32 32" className="w-5 h-5 fill-white"><path d="M16.004 2.667C8.64 2.667 2.667 8.64 2.667 16c0 2.347.619 4.56 1.7 6.48L2.667 29.333l7.027-1.68A13.275 13.275 0 0016.004 29.333C23.36 29.333 29.333 23.36 29.333 16S23.36 2.667 16.004 2.667zm6.08 16c-.333-.16-1.973-.96-2.28-1.067-.307-.107-.52-.16-.747.16-.213.32-.84 1.067-.987 1.28-.16.213-.32.24-.64.08-.333-.16-1.4-.507-2.667-1.627-.987-.88-1.653-1.973-1.84-2.293-.187-.333-.02-.52.147-.68.147-.133.333-.36.507-.533.16-.173.213-.293.32-.507.107-.213.053-.4-.027-.56-.08-.16-.747-1.84-1.027-2.52-.267-.653-.547-.56-.747-.573-.187-.013-.413-.013-.627-.013-.213 0-.573.08-.88.4-.293.32-1.12 1.093-1.12 2.667s1.147 3.107 1.307 3.32c.16.213 2.253 3.44 5.44 4.827.76.32 1.36.52 1.813.667.76.24 1.453.2 2 .12.613-.08 1.893-.773 2.16-1.52.267-.747.267-1.387.187-1.52-.08-.133-.293-.213-.627-.373z"/></svg>
-                WhatsApp Us
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CTASection heading="Ready for a Pristine Transformation?" subtext="Join Gauteng businesses that trust Jimmo for their most critical cleaning needs. Get a custom quote within 24 hours." />
     </main>
   )
 }

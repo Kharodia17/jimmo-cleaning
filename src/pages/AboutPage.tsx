@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import CTASection from '../components/CTASection'
 
 export default function AboutPage() {
   return (
@@ -128,21 +128,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 px-6 md:px-8 text-center max-w-3xl mx-auto">
-        <h2 className="font-headline text-4xl font-bold mb-6">Experience Gauteng Excellence</h2>
-        <p className="text-on-surface-variant mb-10 text-lg">
-          Let us curate a maintenance plan tailored to your specific hygiene needs and your budget.
-        </p>
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <Link to="/contact" className="shimmer-button text-white px-10 py-4 rounded-2xl font-label font-bold text-lg shadow-lg hover:shadow-primary/20 transition-all">
-            Schedule a Consultation
-          </Link>
-          <Link to="/services" className="bg-surface-container-high text-on-surface px-10 py-4 rounded-2xl font-label font-bold text-lg hover:bg-surface-dim transition-all">
-            Our Services
-          </Link>
-        </div>
-      </section>
+      <CTASection heading="Experience Gauteng Excellence" subtext="Let us curate a maintenance plan tailored to your specific hygiene needs and your budget." />
     </main>
   )
 }

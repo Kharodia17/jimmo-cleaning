@@ -1,6 +1,6 @@
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Testimonials from '../components/Testimonials'
+import CTASection from '../components/CTASection'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
 const SA_CITIES = ['Johannesburg', 'Pretoria', 'East Rand', 'Vaal Triangle']
@@ -17,8 +17,8 @@ const galleryImages = [
 const stats = [
   { value: '15+', label: 'Years in Business' },
   { value: '100%', label: 'Gauteng Coverage' },
-  { value: '500+', label: 'Businesses Served' },
-  { value: '50+', label: 'Team Members' },
+  { value: '50+', label: 'Businesses Served' },
+  { value: '10+', label: 'Team Members' },
 ]
 
 const trustBadges = [
@@ -28,7 +28,6 @@ const trustBadges = [
 ]
 
 export default function HomePage() {
-  const [email, setEmail] = useState('')
   useScrollReveal()
 
   return (
@@ -95,8 +94,9 @@ export default function HomePage() {
             {/* City chips */}
             <div className="flex flex-wrap gap-2 pt-2">
               {SA_CITIES.map((city) => (
-                <span key={city} className="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label text-xs font-medium">
-                  📍 {city}
+                <span key={city} className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary font-label text-xs font-semibold">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary inline-block flex-shrink-0" />
+                  {city}
                 </span>
               ))}
             </div>
@@ -240,14 +240,14 @@ export default function HomePage() {
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { city: 'Johannesburg', areas: 'Sandton · Rosebank · Midrand · Fourways', icon: 'location_city' },
-              { city: 'Pretoria', areas: 'Menlyn · Brooklyn · Centurion · Hatfield', icon: 'account_balance' },
-              { city: 'East Rand', areas: 'Germiston · Boksburg · Ekurhuleni · Brakpan', icon: 'factory' },
-              { city: 'Vaal Triangle', areas: 'Vanderbijlpark · Vereeniging · Sasolburg', icon: 'water' },
-            ].map(({ city, areas, icon }, i) => (
+              { city: 'Johannesburg', areas: 'Sandton · Rosebank · Midrand · Fourways', icon: 'apartment', color: 'text-[#009BAA]' },
+              { city: 'Pretoria', areas: 'Menlyn · Brooklyn · Centurion · Hatfield', icon: 'account_balance', color: 'text-[#5ABFCC]' },
+              { city: 'East Rand', areas: 'Germiston · Boksburg · Ekurhuleni · Brakpan', icon: 'precision_manufacturing', color: 'text-[#009BAA]' },
+              { city: 'Vaal Triangle', areas: 'Vanderbijlpark · Vereeniging · Sasolburg', icon: 'water_drop', color: 'text-[#5ABFCC]' },
+            ].map(({ city, areas, icon, color }, i) => (
               <div key={city} className={`text-center space-y-3 reveal delay-${i * 100 + 100}`}>
-                <div className="w-12 h-12 rounded-xl bg-inverse-on-surface/10 flex items-center justify-center mx-auto">
-                  <span className="material-symbols-outlined text-inverse-on-surface/70 text-2xl">{icon}</span>
+                <div className="w-14 h-14 rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center mx-auto">
+                  <span className={`material-symbols-outlined text-2xl ${color}`} style={{ fontVariationSettings: "'FILL' 1" }}>{icon}</span>
                 </div>
                 <h4 className="font-headline font-bold text-inverse-on-surface text-lg">{city}</h4>
                 <p className="font-label text-xs text-inverse-on-surface/50 leading-relaxed">{areas}</p>
@@ -259,8 +259,23 @@ export default function HomePage() {
 
       {/* Why Choose Us — The Jimmo Standard */}
       <section className="bg-surface-container-lowest py-24 px-6 md:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="max-w-3xl mx-auto space-y-10 reveal">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+
+          {/* Real team photos */}
+          <div className="w-full lg:w-5/12 grid grid-cols-2 gap-3 reveal-left flex-shrink-0">
+            <img
+              src="/gallery/WA0020.jpg"
+              alt="Jimmo team cleaning facility"
+              className="rounded-2xl w-full aspect-square object-cover shadow-md"
+            />
+            <img
+              src="/gallery/WA0023.jpg"
+              alt="Jimmo floor polishing service"
+              className="rounded-2xl w-full aspect-square object-cover shadow-md mt-8"
+            />
+          </div>
+
+          <div className="w-full lg:w-7/12 space-y-10 reveal-right delay-200">
             <div>
               <h2 className="text-sm font-label font-bold text-primary uppercase tracking-[0.2em] mb-4">The Jimmo Standard</h2>
               <h3 className="text-4xl font-headline font-bold text-on-surface mb-6">Why Gauteng's Top Businesses Trust Us</h3>
@@ -293,44 +308,7 @@ export default function HomePage() {
       {/* Testimonials */}
       <Testimonials />
 
-      {/* CTA Section */}
-      <section className="py-24 px-6 md:px-8">
-        <div className="max-w-7xl mx-auto bg-primary rounded-[3rem] overflow-hidden relative reveal-scale">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary to-tertiary opacity-90" />
-          <div className="relative z-10 px-8 md:px-12 py-20 flex flex-col items-center text-center">
-            <h2 className="text-4xl md:text-6xl font-headline font-extrabold text-white mb-6 tracking-tight">
-              Ready for a Pristine Space?
-            </h2>
-            <p className="text-primary-fixed text-lg md:text-xl max-w-2xl mb-10">
-              Get a transparent, no-obligation quote — tailored to your facility's specific needs and delivered within 24 hours.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 w-full justify-center max-w-lg">
-              <input
-                className="flex-grow rounded-2xl border-none bg-white/10 text-white placeholder-white/60 focus:ring-2 focus:ring-white/30 px-6 py-4 outline-none"
-                placeholder="Your Business Email"
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <button className="bg-white text-primary px-8 py-4 rounded-2xl font-headline font-bold hover:bg-primary-fixed transition-colors whitespace-nowrap">
-                Get My Quote
-              </button>
-            </div>
-            <div className="mt-8 flex flex-col sm:flex-row items-center gap-4 text-white/60 font-label text-sm">
-              <span>Join 500+ SA businesses today.</span>
-              <a
-                href="https://wa.me/27795745177"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-white/80 hover:text-white transition-colors"
-              >
-                <svg viewBox="0 0 32 32" className="w-4 h-4 fill-current"><path d="M16.004 2.667C8.64 2.667 2.667 8.64 2.667 16c0 2.347.619 4.56 1.7 6.48L2.667 29.333l7.027-1.68A13.275 13.275 0 0016.004 29.333C23.36 29.333 29.333 23.36 29.333 16S23.36 2.667 16.004 2.667zm6.08 16c-.333-.16-1.973-.96-2.28-1.067-.307-.107-.52-.16-.747.16-.213.32-.84 1.067-.987 1.28-.16.213-.32.24-.64.08-.333-.16-1.4-.507-2.667-1.627-.987-.88-1.653-1.973-1.84-2.293-.187-.333-.02-.52.147-.68.147-.133.333-.36.507-.533.16-.173.213-.293.32-.507.107-.213.053-.4-.027-.56-.08-.16-.747-1.84-1.027-2.52-.267-.653-.547-.56-.747-.573-.187-.013-.413-.013-.627-.013-.213 0-.573.08-.88.4-.293.32-1.12 1.093-1.12 2.667s1.147 3.107 1.307 3.32c.16.213 2.253 3.44 5.44 4.827.76.32 1.36.52 1.813.667.76.24 1.453.2 2 .12.613-.08 1.893-.773 2.16-1.52.267-.747.267-1.387.187-1.52-.08-.133-.293-.213-.627-.373z"/></svg>
-                Or WhatsApp us directly
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CTASection />
     </main>
   )
 }

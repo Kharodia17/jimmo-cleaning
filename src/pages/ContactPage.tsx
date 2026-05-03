@@ -169,13 +169,19 @@ export default function ContactPage() {
 
         {/* Map */}
         <section className="lg:col-span-12 mt-4">
-          <div className="relative w-full h-[400px] rounded-2xl overflow-hidden shadow-sm">
-            <img className="w-full h-full object-cover grayscale brightness-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX52TQAmmy9FlLyQOK6gdvWObXhZh7yaAKjdhjvc-TgQLkE63g6YneVLEQ6RF4Zd6BTL9IHtCC9MaBVMajVUaNpOXI-p28spfp1aHwzArG6H_dbq9jwqxXjnY230DyEbk2EWjpsppVoTrxOVORgr4ZEnKnU-b4tZ949LbJXGgzjmx6FGSnavkEaKvk-LSVrD4LO80GkTKIOpt8W5RXBIhjLeWTFPwgyMUEbYt9P0BZ9BguXVe-dAJHq8OEiVM2_tdczuISFVLjH2o" alt="Lenasia South, Gauteng" />
-            <div className="absolute inset-0 bg-primary/10 pointer-events-none" />
-            <div className="absolute top-8 left-8 glass-card p-6 rounded-2xl max-w-sm border border-white/30 hidden md:block">
-              <h4 className="font-headline font-bold text-on-surface mb-1">Lenasia South Office</h4>
-              <p className="text-on-surface-variant text-sm mb-1">6 Oxford Crescent, Lenasia South, Gauteng</p>
-              <p className="text-on-surface-variant text-xs mb-4">Serving Gauteng, Western Cape &amp; KwaZulu-Natal</p>
+          <div className="relative w-full h-[420px] rounded-2xl overflow-hidden shadow-md">
+            <iframe
+              title="Jimmo Cleaning Services — Lenasia South"
+              src="https://maps.google.com/maps?q=6+Oxford+Crescent,+Lenasia+South,+Gauteng,+South+Africa&output=embed&z=15"
+              width="100%"
+              height="100%"
+              style={{ border: 0, display: 'block' }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+            <div className="absolute top-4 left-4 glass-card p-5 rounded-2xl max-w-xs border border-white/30 hidden md:block shadow-lg">
+              <h4 className="font-headline font-bold text-on-surface mb-0.5">Lenasia South Office</h4>
+              <p className="text-on-surface-variant text-sm mb-3">6 Oxford Crescent, Lenasia South, Gauteng</p>
               <a href="https://maps.google.com/?q=6+Oxford+Crescent+Lenasia+South+Gauteng" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary font-bold font-label text-sm hover:underline">
                 Open in Google Maps <span className="material-symbols-outlined text-xs">open_in_new</span>
               </a>
