@@ -6,12 +6,12 @@ import { useScrollReveal } from '../hooks/useScrollReveal'
 const SA_CITIES = ['Johannesburg', 'Pretoria', 'East Rand', 'Vaal Triangle']
 
 const galleryImages = [
-  '/gallery/IMG-20260409-WA0045.jpg',
-  '/gallery/IMG-20260409-WA0046.jpg',
-  '/gallery/IMG-20260409-WA0050.jpg',
-  '/gallery/IMG-20260409-WA0051.jpg',
-  '/gallery/IMG-20260409-WA0052.jpg',
-  '/gallery/IMG-20260409-WA0054.jpg',
+  { src: '/gallery/WA0504-18.jpg', alt: 'Pristine fountain atrium after cleaning' },
+  { src: '/gallery/WA0504-21.jpg', alt: 'Carpet cleaning specialist at work' },
+  { src: '/gallery/WA0504-19.jpg', alt: 'Floor polishing in luxury hall' },
+  { src: '/gallery/WA0504-23.jpg', alt: 'Industrial carpet vacuum cleaning' },
+  { src: '/gallery/WA0504-22.jpg', alt: 'Jimmo team cleaning ornate atrium' },
+  { src: '/gallery/WA0504-20.jpg', alt: 'Immaculate fountain after deep clean' },
 ]
 
 const stats = [
@@ -49,9 +49,9 @@ export default function HomePage() {
       <section className="relative min-h-[88vh] flex items-center overflow-hidden bg-surface-bright">
         <div className="absolute inset-0 z-0">
           <img
-            className="w-full h-full object-cover opacity-30"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUswawe3hnUtGAbvmgv5SUsTdEgP841yhwcFpekb4yoOnt5l_hATyeAtTzXxZrcolfxa7E14zuPrKkmRAJS-yu04guywTTw9WBuLTxVmwmscsWewampW0vKPIlE5yyNh5UxWTtyNKRV9fYofGXj5FAN33RF65E1vKT3uGd1nEY8zlP97d2zgdAhaVCB8HjVPVHv0lmmqDxAmtnKposcQI0DHaqVUp0wAFM1o8U7dofLRYM5Rc3FZbIo9r2nJj8YKr3qzARAXW-ooU"
-            alt="Modern office lobby"
+            className="w-full h-full object-cover opacity-20"
+            src="/gallery/WA0504-22.jpg"
+            alt="Jimmo team at work"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent" />
         </div>
@@ -106,8 +106,8 @@ export default function HomePage() {
             <div className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-2xl transform translate-x-4 -translate-y-4">
               <img
                 className="w-full aspect-[4/5] object-cover"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKB4-nq2oShjIki6_lG3ODEVT8l0wlcjwSQeYsCO0SMFDp-8pA_KO9_6SctATPxKmFrfuuQXygODQcy4mACZ2S4O-27V3oatwtAgpY7vqbpCxjFmYd8gAM-WA0dm3BTKTsKYaZcPKlnNpN2V4lKtJxvegdOj51X2DW88fk9GfPeN-H6oi7SmxUD2THtbZBklfuTGWxRJok5IzpKgmmsjGrvcSXk2vRcLU91SoblRGPu5Zh396jBMj-KZSPXJyM9SYFtvAKGf1tHn0"
-                alt="Professional cleaning equipment"
+                src="/gallery/WA0504-18.jpg"
+                alt="Pristine atrium cleaned by Jimmo"
               />
             </div>
             <div className="absolute top-1/2 -left-12 z-20 glass-card p-8 rounded-2xl shadow-xl max-w-[240px]">
@@ -158,7 +158,7 @@ export default function HomePage() {
               </ul>
             </div>
             <div className="absolute right-0 bottom-0 w-1/2 h-2/3 opacity-20 group-hover:opacity-40 transition-opacity duration-700">
-              <img className="w-full h-full object-cover rounded-tl-3xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlnpnN29JZAYWN9bw6jBHHFUWNj4o2_8Bh7wrbp8E34vXs4EzoyzSboJbhx-B3bz3rccLSg4ZaQbziTHWrd51ZVincj-7H-lYNYfiS2dcK-VbTrrWMeyj0rWOSf5bT5cehqfXI10sZ-9lcuqmWY6aZxmORZDjLU6h1Xzp5yS5ERbA6gGKetgrgjrvNuuAzeh38aE3ZIWSlLKwe4vUcCd95v8ybxqHkq5TeATqy_TnHPPKW8VdyxGd7sv8F4xUGLhnyWr_EeTBXCZA" alt="" />
+              <img className="w-full h-full object-cover rounded-tl-3xl" src="/gallery/WA0504-19.jpg" alt="Floor polishing in luxury hall" />
             </div>
           </div>
 
@@ -213,7 +213,7 @@ export default function HomePage() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-          {galleryImages.map((src, i) => (
+          {galleryImages.map(({ src, alt }, i) => (
             <a
               key={i}
               href={src}
@@ -223,7 +223,7 @@ export default function HomePage() {
             >
               <img
                 src={src}
-                alt={`Jimmo cleaning work ${i + 1}`}
+                alt={alt}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"
               />
@@ -264,13 +264,13 @@ export default function HomePage() {
           {/* Real team photos */}
           <div className="w-full lg:w-5/12 grid grid-cols-2 gap-3 reveal-left flex-shrink-0">
             <img
-              src="/gallery/WA0020.jpg"
-              alt="Jimmo team cleaning facility"
+              src="/gallery/WA0504-21.jpg"
+              alt="Jimmo specialist cleaning carpets"
               className="rounded-2xl w-full aspect-square object-cover shadow-md"
             />
             <img
-              src="/gallery/WA0023.jpg"
-              alt="Jimmo floor polishing service"
+              src="/gallery/WA0504-22.jpg"
+              alt="Jimmo team cleaning ornate atrium"
               className="rounded-2xl w-full aspect-square object-cover shadow-md mt-8"
             />
           </div>

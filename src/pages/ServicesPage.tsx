@@ -30,9 +30,9 @@ export default function ServicesPage() {
           <div className="relative">
             <div className="w-full h-[500px] rounded-2xl overflow-hidden shadow-2xl">
               <img
-                alt="Professional cleaning"
+                alt="Jimmo floor polishing specialist"
                 className="w-full h-full object-cover"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8ad58cis0B9hYjxqsHzHRFMdASN5AS2DcxVmdLrdBQg5hTmC1DE3mdQLoQQQfR5zFw7g30w1ofwPmnnEZIiXx1aSdi-SOfwK502D0_9kEHB9cRYd89uhy7WSZnuCx-qnvWrSxF7bq_FuLerPNRaCPvyOoyNjijRKQVaR5IOJO_pLketNmqgCAVeufo4yXrImhzvsA5JukhWk61gTivDpnBHRGv6-ikjjy50ogeal7VEb0WsXVuVD0wLhX2NqIjP7WHvFvpb-8tIU"
+                src="/gallery/WA0504-19.jpg"
               />
             </div>
             <div className="absolute -bottom-6 -left-6 glass-card p-6 rounded-2xl shadow-xl max-w-xs hidden md:block">

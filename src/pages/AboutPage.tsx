@@ -24,7 +24,7 @@ export default function AboutPage() {
             <img
               alt="Professional cleaning team"
               className="w-full h-full object-cover"
-              src="https://images.pexels.com/photos/8365182/pexels-photo-8365182.jpeg?auto=compress&cs=tinysrgb&w=800"
+              src="/gallery/WA0504-20.jpg"
             />
           </div>
           <div className="absolute -bottom-6 -left-6 w-48 h-48 bg-secondary-container rounded-3xl -z-10" />
@@ -112,7 +112,7 @@ export default function AboutPage() {
               <img
                 alt="Company culture"
                 className="rounded-3xl shadow-xl w-full"
-                src="https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src="/gallery/WA0504-18.jpg"
               />
               <div className="glass-card absolute -bottom-8 -left-8 p-6 rounded-2xl shadow-lg border border-white/20 hidden md:block">
                 <div className="flex items-center gap-4">
