@@ -198,54 +198,71 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Full Service Menu */}
+      {/* Full Service Catalogue */}
       <section className="py-24 px-6 md:px-8 bg-surface-container-lowest">
         <div className="max-w-7xl mx-auto">
+
+          {/* Section header */}
           <div className="mb-14 reveal">
-            <p className="text-sm font-label font-bold text-secondary uppercase tracking-[0.2em] mb-3">Complete Offering</p>
+            <p className="text-sm font-label font-bold text-secondary uppercase tracking-[0.2em] mb-4">Service Catalogue</p>
             <h2 className="text-4xl md:text-5xl font-headline font-bold text-on-surface tracking-tight mb-4">
-              Everything We Clean
+              Our Full Scope of Services
             </h2>
-            <p className="text-on-surface-variant text-lg max-w-2xl">
+            <p className="text-on-surface-variant text-lg max-w-2xl leading-relaxed">
               One call covers it all. Browse our full range of services and request a custom quote for exactly what you need.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {serviceCategories.map(({ icon, label, bg, services }, i) => (
+          {/* Category grid — matches Commercial Cleaning card style */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {serviceCategories.map(({ icon, label, services }, i) => (
               <div
                 key={label}
-                className={`reveal delay-${Math.min(i % 3, 2) * 100 + 100} rounded-2xl border border-outline-variant/20 overflow-hidden bg-surface hover:shadow-lg transition-shadow duration-300`}
+                className={`reveal delay-${Math.min(i % 3, 2) * 100 + 100} p-6 rounded-2xl bg-surface-bright border border-outline-variant/20 flex flex-col hover:shadow-md transition-shadow duration-300`}
               >
-                {/* Card header */}
-                <div className={`${bg} px-6 py-4 flex items-center gap-3`}>
-                  <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <span className="material-symbols-outlined text-[#007A87] text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>{icon}</span>
+                {/* Icon + title */}
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-11 h-11 rounded-xl bg-primary-fixed flex items-center justify-center flex-shrink-0">
+                    <span
+                      className="material-symbols-outlined text-primary"
+                      style={{ fontSize: '22px', fontVariationSettings: "'FILL' 1" }}
+                    >
+                      {icon}
+                    </span>
                   </div>
-                  <h3 className="font-headline font-bold text-on-surface text-base">{label}</h3>
+                  <h3 className="font-headline font-bold text-on-surface text-base leading-tight">{label}</h3>
                 </div>
 
-                {/* Service list */}
-                <ul className="px-6 py-5 space-y-2.5">
+                {/* Divider */}
+                <div className="h-px bg-outline-variant/30 mb-4" />
+
+                {/* Services list */}
+                <ul className="space-y-2.5 flex-1 mb-5">
                   {services.map((service) => (
-                    <li key={service} className="flex items-start gap-2.5 font-label text-sm text-on-surface-variant">
-                      <span className="w-4 h-4 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <span className="material-symbols-outlined text-[#007A87]" style={{ fontSize: '12px', fontVariationSettings: "'FILL' 1" }}>check</span>
-                      </span>
+                    <li key={service} className="flex items-start gap-2.5 font-label text-sm text-on-surface-variant leading-snug">
+                      <span className="material-symbols-outlined text-secondary flex-shrink-0 mt-0.5" style={{ fontSize: '14px', fontVariationSettings: "'FILL' 1" }}>check_circle</span>
                       {service}
                     </li>
                   ))}
                 </ul>
 
-                {/* Footer */}
-                <div className="px-6 pb-5">
-                  <Link to="/contact" className="text-[#007A87] font-label font-semibold text-xs flex items-center gap-1 hover:gap-2 transition-all">
-                    Get a quote <span className="material-symbols-outlined text-xs">arrow_forward</span>
-                  </Link>
-                </div>
+                {/* CTA */}
+                <Link
+                  to="/contact"
+                  className="mt-auto flex items-center gap-1 text-primary font-label font-semibold text-sm hover:gap-2.5 transition-all duration-200"
+                >
+                  Get a Quote
+                  <span className="material-symbols-outlined text-primary" style={{ fontSize: '16px' }}>arrow_forward</span>
+                </Link>
               </div>
             ))}
           </div>
+
+          <p className="mt-10 text-center text-on-surface-variant font-label text-sm">
+            Don't see what you need?{' '}
+            <Link to="/contact" className="text-primary font-semibold hover:underline">Contact us</Link>
+            {' '}— we accommodate custom requirements.
+          </p>
         </div>
       </section>
 
