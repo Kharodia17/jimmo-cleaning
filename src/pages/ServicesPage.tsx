@@ -19,7 +19,7 @@ export default function ServicesPage() {
               From heavy-duty industrial sites in Germiston to sophisticated corporate headquarters in Sandton — we deliver an uncompromising hygiene standard across South Africa.
             </p>
             <div className="flex flex-wrap gap-3">
-              {['OHS Compliant', '15+ Yrs Experience', 'SABS Aligned', 'Eco-Friendly'].map((badge) => (
+              {['Professionally Trained', '15+ Yrs Experience', 'Quality Assured', 'Eco-Friendly'].map((badge) => (
                 <span key={badge} className="px-3 py-1.5 rounded-full bg-primary-fixed text-primary font-label text-xs font-bold uppercase tracking-wide">
                   {badge}
                 </span>
@@ -58,9 +58,9 @@ export default function ServicesPage() {
               <div className="relative">
                 <div className="w-full aspect-square bg-surface-container-highest rounded-2xl overflow-hidden">
                   <img
-                    alt="Industrial Cleaning"
-                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf7p1WW7rWfceKEcVIB6L0_ej2K-kKdCBVQ3KtyBAHGe5zHgJNBF_PYhQB-mi9_04wteBzIC6pJybNhJz7gScX0yJ8PZHywwrbs5JMizb1chZimNaxBbS4MCgyZWx97JQzVkYHBVmJ0WwViZx7jfpIESgGZPtO36oGduuc--B0_Ki_Dk-XPhNHr5Se0zIcG7IEJD8Y7eDxwiaCZaPKMexhNOApgvPWVQOZC3LJZXcVlnqxjxQwlf7kdRuD7tf0VAbKWvu4JxypHX0"
+                    alt="Industrial Cleaning Equipment"
+                    className="w-full h-full object-contain p-6"
+                    src="/gallery/vacuum.jpg"
                   />
                 </div>
                 <div className="absolute top-8 right-8 bg-primary text-white p-4 rounded-xl font-label font-bold text-center leading-tight">
@@ -72,13 +72,13 @@ export default function ServicesPage() {
             <div className="w-full md:w-1/2 space-y-8 order-1 md:order-2">
               <h2 className="text-4xl font-headline font-bold text-tertiary">Industrial Cleaning</h2>
               <p className="text-on-surface-variant leading-relaxed text-lg font-body">
-                We tackle the toughest SA industrial environments — manufacturing plants in Germiston, warehouses on the N3 corridor, and construction sites across Gauteng — with specialised machinery and full OHS compliance.
+                We tackle the toughest SA industrial environments — manufacturing plants in Germiston, warehouses on the N3 corridor, and construction sites across Gauteng — with specialised machinery and an unwavering hygiene standard.
               </p>
               <div className="grid grid-cols-1 gap-4">
                 {[
-                  { icon: 'factory', title: 'Precision Degreasing', desc: 'Removing VOCs and heavy industrial residue safely, with full MSDS documentation.' },
-                  { icon: 'safety_check', title: 'OHS Act Compliance', desc: 'Full adherence to the Occupational Health and Safety Act No. 85 of 1993 at all times.' },
-                  { icon: 'bolt', title: 'Load-Shedding Ready', desc: 'Our teams operate with battery-powered and generator-backed equipment — zero downtime.' },
+                  { icon: 'factory', title: 'Precision Degreasing', desc: 'Removing heavy industrial residue, grease and contaminants safely using professional-grade machinery.' },
+                  { icon: 'safety_check', title: 'Health & Safety First', desc: 'Our teams are trained in safe chemical handling and proper PPE use to protect your workforce at all times.' },
+                  { icon: 'bolt', title: 'Always Operational', desc: 'We work around your shift schedule — day, night, or weekend — to cause zero disruption to your operations.' },
                 ].map(({ icon, title, desc }) => (
                   <div key={title} className="flex items-start gap-4 p-4 rounded-xl bg-surface-container-lowest">
                     <span className="material-symbols-outlined text-secondary">{icon}</span>
@@ -105,10 +105,10 @@ export default function ServicesPage() {
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {[
-                  { icon: 'eco', title: 'SANS-Aligned Cleaning', desc: 'Biodegradable agents compliant with SA environmental standards — better for your team and the planet.' },
-                  { icon: 'schedule', title: 'Flexible Scheduling', desc: 'After-hours or intraday cleaning designed around South African business hours and public holidays.' },
-                  { icon: 'local_police', title: 'Vetted Teams Only', desc: 'Every cleaner passes a PSIRA-standard background check before entering your premises.' },
-                  { icon: 'receipt_long', title: 'Tax-Invoice Ready', desc: 'Full VAT-compliant invoicing and monthly reporting for your finance team.' },
+                  { icon: 'eco', title: 'Eco-Conscious Cleaning', desc: 'Biodegradable, non-toxic agents that are better for your team and the environment.' },
+                  { icon: 'schedule', title: 'Flexible Scheduling', desc: 'After-hours or intraday cleaning designed around your business hours and public holidays.' },
+                  { icon: 'verified_user', title: 'Screened & Trusted Teams', desc: 'Every team member undergoes background checks and in-house training before entering your premises.' },
+                  { icon: 'receipt_long', title: 'Professional Invoicing', desc: 'Detailed invoicing and monthly reporting to keep your records and management team informed.' },
                 ].map(({ icon, title, desc }) => (
                   <div key={title} className="p-6 rounded-2xl bg-surface-bright border border-outline-variant/20">
                     <span className="material-symbols-outlined text-primary mb-4 block">{icon}</span>
@@ -158,7 +158,7 @@ export default function ServicesPage() {
               <span className="material-symbols-outlined text-4xl mb-4">window</span>
               <h4 className="text-xl font-bold mb-2">High-Rise Window Care</h4>
               <p className="text-primary-fixed-dim text-sm">
-                Abseiling teams certified for Sandton's skyscrapers and Johannesburg's high-rise commercial towers.
+                Experienced teams equipped for external facade and high-rise window cleaning on Sandton's tallest commercial towers.
               </p>
             </div>
 

@@ -167,7 +167,7 @@ export default function HomePage() {
               <span className="material-symbols-outlined text-primary-container text-4xl mb-6 block">factory</span>
               <h4 className="text-2xl font-headline font-bold mb-4 text-white">Industrial Precision</h4>
               <p className="text-primary-fixed font-body text-sm leading-relaxed">
-                Handling warehouses, manufacturing plants, and mines across Germiston, Midrand, and the East Rand with full OHS compliance.
+                Handling warehouses, manufacturing plants, and mines across Germiston, Midrand, and the East Rand with specialised machinery and strict safety protocols.
               </p>
             </div>
             <div className="mt-8 relative z-10">
@@ -182,7 +182,7 @@ export default function HomePage() {
             <span className="material-symbols-outlined text-on-secondary-container text-3xl mb-4">sanitizer</span>
             <h4 className="text-xl font-headline font-bold text-on-secondary-container mb-2">Specialised Care</h4>
             <p className="text-on-secondary-fixed-variant text-sm font-body">
-              Medical-grade sanitation, post-construction cleans, and high-rise window care — SABS compliant throughout.
+              Medical-grade sanitation, post-construction cleans, and high-rise window care — to the highest safety standards throughout.
             </p>
           </div>
 
@@ -190,7 +190,7 @@ export default function HomePage() {
             <div className="max-w-md">
               <h4 className="text-xl font-headline font-bold mb-2">Sustainable Practices</h4>
               <p className="text-on-surface-variant text-sm">
-                We use non-toxic, biodegradable products compliant with South African environmental regulations — better for your team, better for our planet.
+                We use non-toxic, biodegradable products that follow best environmental practices — better for your team, better for our planet.
               </p>
             </div>
             <div className="flex-shrink-0 ml-6 transform group-hover:rotate-12 transition-transform duration-500">

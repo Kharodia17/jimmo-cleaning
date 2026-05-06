@@ -37,7 +37,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-x-10 gap-y-2">
           {[
             { icon: 'workspace_premium', text: '15+ Years Industry Experience' },
-            { icon: 'gavel', text: 'OHS Act Compliant' },
+            { icon: 'gavel', text: 'Health & Safety Focused' },
             { icon: 'eco', text: 'Eco-Conscious Practices' },
             { icon: 'flag', text: 'Proudly South African' },
           ].map(({ icon, text }) => (
@@ -62,7 +62,7 @@ export default function AboutPage() {
               {
                 icon: 'eco', color: 'text-secondary', fill: true,
                 title: 'Hygiene First',
-                desc: "Our commitment to sanitation goes beyond surface shine. We use hospital-grade protocols and SANS-compliant products to protect your team's health, not just the appearance of your space.",
+                desc: "Our commitment to sanitation goes beyond surface shine. We use hospital-grade protocols and eco-conscious products to protect your team's health, not just the appearance of your space.",
               },
               {
                 icon: 'calendar_month', color: 'text-tertiary', fill: false,
@@ -96,7 +96,7 @@ export default function AboutPage() {
                 {[
                   'Every client receives a signed service level agreement and dedicated account support',
                   'Ongoing training in modern sanitation science and SA regulations',
-                  'Commitment to SANS-compliant, non-toxic, sustainable products',
+                  'Commitment to eco-conscious, non-toxic, sustainable products',
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-4 font-medium">
                     <span className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-primary text-xs font-bold flex-shrink-0">
