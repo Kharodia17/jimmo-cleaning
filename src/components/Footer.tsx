@@ -83,11 +83,22 @@ export default function Footer() {
         {/* Services */}
         <div className="md:col-span-3 space-y-6">
           <h5 className="font-headline font-bold text-white text-sm uppercase tracking-widest">Services</h5>
-          <nav className="flex flex-col space-y-3 font-label text-sm">
-            <Link to="/services" className="text-slate-400 hover:text-[#009BAA] transition-colors">Commercial Cleaning</Link>
-            <Link to="/services" className="text-slate-400 hover:text-[#009BAA] transition-colors">Industrial Facilities</Link>
-            <Link to="/services" className="text-slate-400 hover:text-[#009BAA] transition-colors">Specialised Care</Link>
-            <Link to="/contact" className="text-slate-400 hover:text-[#009BAA] transition-colors">Request a Quote</Link>
+          <nav className="flex flex-col space-y-2 font-label text-sm">
+            {[
+              'Residential Cleaning',
+              'Commercial Cleaning',
+              'Specialised Cleaning',
+              'Industrial Cleaning',
+              'Deep & One-Time Services',
+              'Eco-Friendly Cleaning',
+              'Vehicle Cleaning',
+              'Sanitization & Disinfection',
+              'Outdoor Cleaning',
+              'Add-On / Support Services',
+              'Premium & Niche Services',
+            ].map((name) => (
+              <Link key={name} to="/services" className="text-slate-400 hover:text-[#009BAA] transition-colors">{name}</Link>
+            ))}
           </nav>
         </div>
 

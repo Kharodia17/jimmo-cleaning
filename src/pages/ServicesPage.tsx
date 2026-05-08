@@ -148,55 +148,7 @@ const serviceCategories = [
 export default function ServicesPage() {
   useScrollReveal()
   return (
-    <main className="pt-24">
-
-      {/* Hero */}
-      <section className="px-6 md:px-8 py-20 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6 hero-left">
-            <span className="inline-block px-4 py-1 bg-secondary-container text-on-secondary-container rounded-full font-label text-sm font-semibold tracking-wide">
-              OUR EXPERTISE
-            </span>
-            <h1 className="text-5xl md:text-7xl font-headline font-extrabold text-primary leading-tight tracking-tighter">
-              Pristine Care for Every Environment.
-            </h1>
-            <p className="text-lg text-on-surface-variant max-w-lg font-body leading-relaxed">
-              From heavy-duty industrial sites in Germiston to residential homes across Gauteng — we deliver an uncompromising hygiene standard tailored to every space.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              {['Professionally Trained', '15+ Yrs Experience', 'Quality Assured', 'Eco-Friendly'].map((badge) => (
-                <span key={badge} className="px-3 py-1.5 rounded-full bg-primary-fixed text-primary font-label text-xs font-bold uppercase tracking-wide">
-                  {badge}
-                </span>
-              ))}
-            </div>
-            <Link to="/contact" className="shimmer-button inline-flex items-center gap-2 text-white px-8 py-4 rounded-2xl font-headline font-bold text-lg shadow-xl hover:scale-[1.02] transition-all duration-200">
-              Get a Free Quote
-            </Link>
-          </div>
-
-          <div className="relative hero-right">
-            <div className="w-full h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                alt="Jimmo floor polishing specialist"
-                className="w-full h-full object-cover"
-                src="/gallery/WA0504-19.jpg"
-              />
-            </div>
-            <div className="absolute -bottom-6 -left-6 glass-card p-6 rounded-2xl shadow-xl max-w-xs hidden md:block">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                  <span className="material-symbols-outlined text-white">verified</span>
-                </div>
-                <div>
-                  <p className="font-headline font-bold text-primary">15+ Years Experience</p>
-                  <p className="text-xs text-on-surface-variant font-label">Trusted Gauteng Specialists</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    <main className="pt-20">
 
       {/* Full Service Catalogue */}
       <section className="py-24 px-6 md:px-8 bg-surface-container-lowest">
@@ -371,10 +323,10 @@ export default function ServicesPage() {
             </div>
 
             <div className="reveal delay-100 bg-primary text-on-primary rounded-2xl p-8 flex flex-col justify-center text-center min-h-[250px]">
-              <span className="material-symbols-outlined text-4xl mb-4">window</span>
-              <h4 className="text-xl font-bold mb-2">High-Rise Window Care</h4>
+              <span className="material-symbols-outlined text-4xl mb-4">vaccines</span>
+              <h4 className="text-xl font-bold mb-2">Sanitization &amp; Disinfection</h4>
               <p className="text-primary-fixed-dim text-sm">
-                Experienced teams equipped for external facade and high-rise window cleaning on Sandton's tallest commercial towers.
+                Fogging, disinfection, and germ control services for offices, medical facilities, and high-traffic commercial spaces across Gauteng.
               </p>
             </div>
 
