@@ -292,7 +292,7 @@ export default function ServicesPage() {
                 <img
                   alt="Jimmo carpet cleaning"
                   className="w-full h-full object-cover"
-                  src="/gallery/WA0504-21.jpg"
+                  src="/gallery/WA0504-22.jpg"
                 />
               </div>
             </div>
@@ -340,7 +340,7 @@ export default function ServicesPage() {
 
             <div className="reveal delay-300 md:col-span-2 bg-surface-container-lowest rounded-2xl p-8 flex flex-col sm:flex-row items-center gap-8">
               <div className="w-full sm:w-1/3 h-48 sm:h-full rounded-xl overflow-hidden flex-shrink-0">
-                <img alt="Carpet Cleaning" className="w-full h-full object-cover" src="/gallery/WA0504-22.jpg" />
+                <img alt="Carpet Cleaning" className="w-full h-full object-cover" src="/gallery/WA0504-21.jpg" />
               </div>
               <div className="flex-1">
                 <h4 className="text-2xl font-bold mb-2">Upholstery &amp; Carpet Steam</h4>
