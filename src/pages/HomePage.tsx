@@ -6,12 +6,12 @@ import { useScrollReveal } from '../hooks/useScrollReveal'
 const SA_CITIES = ['Johannesburg', 'Pretoria', 'East Rand', 'Vaal Triangle']
 
 const galleryImages = [
-  { src: '/gallery/WA0504-18.jpg', alt: 'Pristine fountain atrium after cleaning' },
-  { src: '/gallery/WA0504-21.jpg', alt: 'Carpet cleaning specialist at work' },
-  { src: '/gallery/WA0504-19.jpg', alt: 'Floor polishing in luxury hall' },
-  { src: '/gallery/WA0504-23.jpg', alt: 'Industrial carpet vacuum cleaning' },
-  { src: '/gallery/WA0504-22.jpg', alt: 'Jimmo team cleaning ornate atrium' },
-  { src: '/gallery/WA0504-20.jpg', alt: 'Immaculate fountain after deep clean' },
+  { src: '/gallery/IMG-20260504-WA0019.jpg', alt: 'Jimmo cleaning team on site' },
+  { src: '/gallery/IMG-20260504-WA0021.jpg', alt: 'Professional cleaning in progress' },
+  { src: '/gallery/IMG-20260504-WA0022.jpg', alt: 'Spotless results after Jimmo service' },
+  { src: '/gallery/IMG-20260506-WA0051.jpg', alt: 'Jimmo specialist at work' },
+  { src: '/gallery/IMG-20260506-WA0052.jpg', alt: 'Commercial cleaning by Jimmo' },
+  { src: '/gallery/IMG-20260506-WA0053.jpg', alt: 'Pristine environment after Jimmo clean' },
 ]
 
 const stats = [
