@@ -1,17 +1,19 @@
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import Testimonials from '../components/Testimonials'
 import CTASection from '../components/CTASection'
+import LightboxGallery from '../components/LightboxGallery'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
 const SA_CITIES = ['Johannesburg', 'Pretoria', 'East Rand', 'Vaal Triangle']
 
 const galleryImages = [
-  { src: '/gallery/IMG-20260504-WA0019.jpg', alt: 'Jimmo cleaning team on site' },
-  { src: '/gallery/IMG-20260504-WA0021.jpg', alt: 'Professional cleaning in progress' },
-  { src: '/gallery/IMG-20260504-WA0022.jpg', alt: 'Spotless results after Jimmo service' },
-  { src: '/gallery/IMG-20260506-WA0051.jpg', alt: 'Jimmo specialist at work' },
-  { src: '/gallery/IMG-20260506-WA0052.jpg', alt: 'Commercial cleaning by Jimmo' },
-  { src: '/gallery/IMG-20260506-WA0053.jpg', alt: 'Pristine environment after Jimmo clean' },
+  { src: '/gallery/IMG-20260504-WA0019.webp', alt: 'Jimmo cleaning team on site' },
+  { src: '/gallery/IMG-20260504-WA0021.webp', alt: 'Professional cleaning in progress' },
+  { src: '/gallery/IMG-20260504-WA0022.webp', alt: 'Spotless results after Jimmo service' },
+  { src: '/gallery/IMG-20260506-WA0051.webp', alt: 'Jimmo specialist at work' },
+  { src: '/gallery/IMG-20260506-WA0052.webp', alt: 'Commercial cleaning by Jimmo' },
+  { src: '/gallery/IMG-20260506-WA0053.webp', alt: 'Pristine environment after Jimmo clean' },
 ]
 
 const stats = [
@@ -32,6 +34,14 @@ export default function HomePage() {
 
   return (
     <main className="pt-20">
+      <Helmet>
+        <title>Jimmo Cleaning Services | Commercial &amp; Industrial Cleaning Gauteng</title>
+        <meta name="description" content="Gauteng's premier commercial cleaning company. Serving Johannesburg, Pretoria, East Rand &amp; Vaal Triangle since 2015. Eco-conscious, professional, reliable. Get a free quote." />
+        <link rel="canonical" href="https://jimmo-cleaning.web.app/" />
+        <meta property="og:title" content="Jimmo Cleaning Services | Commercial &amp; Industrial Cleaning Gauteng" />
+        <meta property="og:description" content="Gauteng's premier commercial cleaning company since 2015. Serving Johannesburg, Pretoria, East Rand &amp; Vaal Triangle." />
+        <meta property="og:url" content="https://jimmo-cleaning.web.app/" />
+      </Helmet>
 
       {/* Trust bar */}
       <div className="bg-primary text-on-primary py-2.5 px-6 overflow-hidden">
@@ -50,8 +60,9 @@ export default function HomePage() {
         <div className="absolute inset-0 z-0">
           <img
             className="w-full h-full object-cover opacity-20"
-            src="/gallery/WA0504-22.jpg"
+            src="/gallery/WA0504-22.webp"
             alt="Jimmo team at work"
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent" />
         </div>
@@ -106,8 +117,9 @@ export default function HomePage() {
             <div className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-2xl transform translate-x-4 -translate-y-4">
               <img
                 className="w-full aspect-[4/5] object-cover"
-                src="/gallery/WA0504-18.jpg"
+                src="/gallery/WA0504-18.webp"
                 alt="Pristine atrium cleaned by Jimmo"
+                fetchPriority="high"
               />
             </div>
             <div className="absolute top-1/2 -left-12 z-20 glass-card p-8 rounded-2xl shadow-xl max-w-[240px]">
@@ -158,7 +170,7 @@ export default function HomePage() {
               </ul>
             </div>
             <div className="absolute right-0 bottom-0 w-1/2 h-2/3 opacity-20 group-hover:opacity-40 transition-opacity duration-700">
-              <img className="w-full h-full object-cover rounded-tl-3xl" src="/gallery/WA0504-19.jpg" alt="Floor polishing in luxury hall" />
+              <img className="w-full h-full object-cover rounded-tl-3xl" src="/gallery/WA0504-19.webp" alt="Floor polishing in luxury hall" loading="lazy" />
             </div>
           </div>
 
@@ -182,7 +194,7 @@ export default function HomePage() {
             <span className="material-symbols-outlined text-on-secondary-container text-3xl mb-4">sanitizer</span>
             <h4 className="text-xl font-headline font-bold text-on-secondary-container mb-2">Specialised Care</h4>
             <p className="text-on-secondary-fixed-variant text-sm font-body">
-              Medical-grade sanitation, post-construction cleans, and high-rise window care — to the highest safety standards throughout.
+              Medical-grade sanitation, post-construction cleans, and sanitization services — to the highest safety standards throughout.
             </p>
           </div>
 
@@ -212,24 +224,7 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-          {galleryImages.map(({ src, alt }, i) => (
-            <a
-              key={i}
-              href={src}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`reveal-scale delay-${Math.min(i * 100, 500)} block rounded-2xl overflow-hidden aspect-square group shadow-sm hover:shadow-xl transition-shadow duration-300`}
-            >
-              <img
-                src={src}
-                alt={alt}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                loading="lazy"
-              />
-            </a>
-          ))}
-        </div>
+        <LightboxGallery images={galleryImages} />
       </section>
 
       {/* Service Cities Strip — Gauteng only */}
@@ -264,14 +259,16 @@ export default function HomePage() {
           {/* Real team photos */}
           <div className="w-full lg:w-5/12 grid grid-cols-2 gap-3 reveal-left flex-shrink-0">
             <img
-              src="/gallery/WA0504-21.jpg"
+              src="/gallery/WA0504-21.webp"
               alt="Jimmo specialist cleaning carpets"
               className="rounded-2xl w-full aspect-square object-cover shadow-md"
+              loading="lazy"
             />
             <img
-              src="/gallery/WA0504-22.jpg"
+              src="/gallery/WA0504-22.webp"
               alt="Jimmo team cleaning ornate atrium"
               className="rounded-2xl w-full aspect-square object-cover shadow-md mt-8"
+              loading="lazy"
             />
           </div>
 

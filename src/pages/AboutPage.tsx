@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import CTASection from '../components/CTASection'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
@@ -5,6 +6,14 @@ export default function AboutPage() {
   useScrollReveal()
   return (
     <main className="pt-24">
+      <Helmet>
+        <title>About Us | Jimmo Cleaning Services</title>
+        <meta name="description" content="15+ years of trusted commercial cleaning in Gauteng. Proudly South African, independently operated. Health-focused, eco-conscious, always reliable." />
+        <link rel="canonical" href="https://jimmo-cleaning.web.app/about" />
+        <meta property="og:title" content="About Jimmo Cleaning Services" />
+        <meta property="og:description" content="15+ years of trusted commercial cleaning in Gauteng. Proudly South African &amp; independent since 2015." />
+        <meta property="og:url" content="https://jimmo-cleaning.web.app/about" />
+      </Helmet>
       {/* Hero */}
       <section className="relative px-6 md:px-8 py-20 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-7">
@@ -24,7 +33,7 @@ export default function AboutPage() {
             <img
               alt="Professional cleaning team"
               className="w-full h-full object-cover"
-              src="/gallery/WA0504-20.jpg"
+              src="/gallery/WA0504-20.webp"
             />
           </div>
           <div className="absolute -bottom-6 -left-6 w-48 h-48 bg-secondary-container rounded-3xl -z-10" />
@@ -112,7 +121,7 @@ export default function AboutPage() {
               <img
                 alt="Company culture"
                 className="rounded-3xl shadow-xl w-full"
-                src="/gallery/WA0504-18.jpg"
+                src="/gallery/WA0504-18.webp"
               />
               <div className="glass-card absolute -bottom-8 -left-8 p-6 rounded-2xl shadow-lg border border-white/20 hidden md:block">
                 <div className="flex items-center gap-4">

@@ -1,11 +1,31 @@
 import { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 
 const WA_LINK = 'https://wa.me/27795745177?text=Hi%20Jimmo!%20I%27d%20like%20to%20get%20a%20quote.'
+
+// Replace this with your Web3Forms access key from web3forms.com
+const WEB3FORMS_KEY = 'YOUR_WEB3FORMS_ACCESS_KEY'
+
+const SERVICE_OPTIONS = [
+  'Commercial Cleaning',
+  'Residential Cleaning',
+  'Industrial Cleaning',
+  'Specialised / Deep Cleaning',
+  'Sanitization & Disinfection',
+  'Upholstery & Carpet Steam',
+  'Post-Construction Clean',
+  'Eco-Friendly Cleaning',
+  'Vehicle Cleaning',
+  'Outdoor Cleaning',
+  'Rapid Response / Emergency',
+  'Other',
+]
 
 export default function ContactPage() {
   const [form, setForm] = useState({ name: '', email: '', service: 'Commercial Cleaning', message: '' })
   const [submitted, setSubmitted] = useState(false)
   const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState('')
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value })
@@ -14,13 +34,46 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setSubmitting(true)
-    await new Promise((r) => setTimeout(r, 900))
-    setSubmitting(false)
-    setSubmitted(true)
+    setError('')
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          subject: `New Quote Request — ${form.service}`,
+          from_name: form.name,
+          name: form.name,
+          email: form.email,
+          service: form.service,
+          message: form.message,
+        }),
+      })
+      const data = await res.json()
+      if (data.success) {
+        setSubmitted(true)
+      } else {
+        setError('Something went wrong. Please try WhatsApp instead.')
+      }
+    } catch {
+      setError('Network error. Please try WhatsApp instead.')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
     <main className="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+      <Helmet>
+        <title>Get a Free Quote | Jimmo Cleaning Services</title>
+        <meta name="description" content="Contact Jimmo Cleaning Services for a free, no-obligation quote. Serving all of Gauteng — Johannesburg, Pretoria, East Rand &amp; Vaal Triangle. Respond within 24 hours." />
+        <link rel="canonical" href="https://jimmo-cleaning.web.app/contact" />
+        <meta property="og:title" content="Get a Free Quote | Jimmo Cleaning Services" />
+        <meta property="og:description" content="Contact Jimmo for a free quote. Johannesburg, Pretoria, East Rand &amp; Vaal Triangle. We respond within 24 hours." />
+        <meta property="og:url" content="https://jimmo-cleaning.web.app/contact" />
+      </Helmet>
+
       {/* Editorial Header */}
       <header className="mb-20 max-w-3xl">
         <h1 className="font-headline text-5xl md:text-7xl font-extrabold text-on-surface tracking-tighter leading-none mb-6">
@@ -71,13 +124,9 @@ export default function ContactPage() {
                 <div className="space-y-2">
                   <label className="font-label text-sm font-semibold text-on-surface-variant px-1 block">Service Interest</label>
                   <select name="service" className="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all appearance-none text-on-surface outline-none" value={form.service} onChange={handleChange}>
-                    <option>Commercial Cleaning</option>
-                    <option>Industrial Cleaning</option>
-                    <option>Medical Grade Sanitation</option>
-                    <option>Post-Construction Clean</option>
-                    <option>High-Rise Window Care</option>
-                    <option>Upholstery &amp; Carpet Steam</option>
-                    <option>Rapid Response / Emergency</option>
+                    {SERVICE_OPTIONS.map(opt => (
+                      <option key={opt}>{opt}</option>
+                    ))}
                   </select>
                 </div>
 
@@ -85,6 +134,10 @@ export default function ContactPage() {
                   <label className="font-label text-sm font-semibold text-on-surface-variant px-1 block">Message</label>
                   <textarea name="message" required className="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all placeholder:text-outline outline-none resize-none" placeholder="Tell us about your space, frequency, and any special requirements…" rows={4} value={form.message} onChange={handleChange} />
                 </div>
+
+                {error && (
+                  <p className="text-red-500 font-label text-sm">{error}</p>
+                )}
 
                 <button type="submit" disabled={submitting} className="w-full shimmer-button text-white py-4 rounded-2xl font-label font-bold text-lg hover:opacity-90 transition-all shadow-xl shadow-primary/10 disabled:opacity-70 flex items-center justify-center gap-2">
                   {submitting ? (

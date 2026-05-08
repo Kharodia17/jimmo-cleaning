@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import CTASection from '../components/CTASection'
 import { useScrollReveal } from '../hooks/useScrollReveal'
 
@@ -149,6 +150,14 @@ export default function ServicesPage() {
   useScrollReveal()
   return (
     <main className="pt-20">
+      <Helmet>
+        <title>Our Services | Jimmo Cleaning Services Gauteng</title>
+        <meta name="description" content="Professional cleaning services in Gauteng — commercial, industrial, residential, sanitization, eco-friendly &amp; more. 11 categories. Free custom quote." />
+        <link rel="canonical" href="https://jimmo-cleaning.web.app/services" />
+        <meta property="og:title" content="Our Services | Jimmo Cleaning Services Gauteng" />
+        <meta property="og:description" content="11 categories of professional cleaning services including commercial, industrial, residential and sanitization. Proudly South African since 2015." />
+        <meta property="og:url" content="https://jimmo-cleaning.web.app/services" />
+      </Helmet>
 
       {/* Full Service Catalogue */}
       <section className="py-24 px-6 md:px-8 bg-surface-container-lowest">
@@ -228,7 +237,7 @@ export default function ServicesPage() {
                   <img
                     alt="Industrial Cleaning Equipment"
                     className="w-full h-full object-contain p-6"
-                    src="/gallery/vacuum.jpg"
+                    src="/gallery/vacuum.webp"
                   />
                 </div>
                 <div className="absolute top-8 right-8 bg-primary text-white p-4 rounded-xl font-label font-bold text-center leading-tight">
@@ -292,7 +301,7 @@ export default function ServicesPage() {
                 <img
                   alt="Jimmo carpet cleaning"
                   className="w-full h-full object-cover"
-                  src="/gallery/WA0504-22.jpg"
+                  src="/gallery/WA0504-22.webp"
                 />
               </div>
             </div>
@@ -313,7 +322,7 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="md:col-span-2 reveal bg-surface-container-lowest rounded-2xl p-8 flex flex-col justify-end relative overflow-hidden group min-h-[250px]">
               <div className="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity">
-                <img alt="" className="w-full h-full object-cover" src="/gallery/WA0504-23.jpg" />
+                <img alt="" className="w-full h-full object-cover" src="/gallery/WA0504-23.webp" />
               </div>
               <span className="material-symbols-outlined text-secondary text-4xl mb-4">sanitizer</span>
               <h4 className="text-2xl font-bold mb-2">Medical Grade Sanitation</h4>
@@ -340,7 +349,7 @@ export default function ServicesPage() {
 
             <div className="reveal delay-300 md:col-span-2 bg-surface-container-lowest rounded-2xl p-8 flex flex-col sm:flex-row items-center gap-8">
               <div className="w-full sm:w-1/3 h-48 sm:h-full rounded-xl overflow-hidden flex-shrink-0">
-                <img alt="Carpet Cleaning" className="w-full h-full object-cover" src="/gallery/WA0504-21.jpg" />
+                <img alt="Carpet Cleaning" className="w-full h-full object-cover" src="/gallery/WA0504-21.webp" />
               </div>
               <div className="flex-1">
                 <h4 className="text-2xl font-bold mb-2">Upholstery &amp; Carpet Steam</h4>
