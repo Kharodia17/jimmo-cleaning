@@ -6,6 +6,7 @@ export default function ContactPage() {
   const [form, setForm] = useState({ name: '', email: '', service: 'Commercial Cleaning', message: '' })
   const [submitted, setSubmitted] = useState(false)
   const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value })
@@ -14,9 +15,31 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setSubmitting(true)
-    await new Promise((r) => setTimeout(r, 900))
-    setSubmitting(false)
-    setSubmitted(true)
+    setError(null)
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
+          name: form.name,
+          email: form.email,
+          subject: `New Inquiry – ${form.service}`,
+          message: form.message,
+          botcheck: '',
+        }),
+      })
+      const data = await res.json()
+      if (data.success) {
+        setSubmitted(true)
+      } else {
+        setError(data.message ?? 'Submission failed. Please try again.')
+      }
+    } catch {
+      setError('Network error. Please check your connection and try again.')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -91,6 +114,9 @@ export default function ContactPage() {
                     <><span className="material-symbols-outlined animate-spin text-lg">progress_activity</span> Sending…</>
                   ) : 'Send Inquiry'}
                 </button>
+                {error && (
+                  <p className="text-red-500 text-sm text-center font-label">{error}</p>
+                )}
               </form>
             )}
           </div>
