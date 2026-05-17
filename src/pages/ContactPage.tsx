@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
+import emailjs from '@emailjs/browser'
 
 const WA_LINK = 'https://wa.me/27795745177?text=Hi%20Jimmo!%20I%27d%20like%20to%20get%20a%20quote.'
 
-// Replace this with your Web3Forms access key from web3forms.com
-const WEB3FORMS_KEY = 'YOUR_WEB3FORMS_ACCESS_KEY'
+const EJS_SERVICE  = 'service_bz6xtip'
+const EJS_TEMPLATE = 'template_dyjxxvn'
+const EJS_KEY      = 'ngdAHDRhvfZzFbgDj'
 
 const SERVICE_OPTIONS = [
   'Commercial Cleaning',
@@ -37,27 +39,21 @@ export default function ContactPage() {
     setError('')
 
     try {
-      const res = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({
-          access_key: WEB3FORMS_KEY,
-          subject: `New Quote Request — ${form.service}`,
-          from_name: form.name,
-          name: form.name,
-          email: form.email,
-          service: form.service,
-          message: form.message,
-        }),
-      })
-      const data = await res.json()
-      if (data.success) {
-        setSubmitted(true)
-      } else {
-        setError('Something went wrong. Please try WhatsApp instead.')
-      }
+      await emailjs.send(
+        EJS_SERVICE,
+        EJS_TEMPLATE,
+        {
+          from_name:  form.name,
+          from_email: form.email,
+          service:    form.service,
+          message:    form.message,
+          time:       new Date().toLocaleString('en-ZA', { dateStyle: 'medium', timeStyle: 'short' }),
+        },
+        { publicKey: EJS_KEY }
+      )
+      setSubmitted(true)
     } catch {
-      setError('Network error. Please try WhatsApp instead.')
+      setError('Something went wrong. Please try WhatsApp instead.')
     } finally {
       setSubmitting(false)
     }
