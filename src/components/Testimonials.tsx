@@ -1,32 +1,32 @@
 const testimonials = [
   {
     quote:
-      "Jimmo has been maintaining our Sandton office towers for over three years. Their attention to detail is unmatched — our tenants consistently comment on the quality.",
-    name: "Thabo Mokoena",
-    title: "Facilities Director",
-    company: "Apex Property Group",
-    city: "Sandton, Johannesburg",
-    initials: "TM",
+      "I will recommend that anyone in need of cleaning services to use Jimmo. They really keep and uphold standards of cleaning at our boarding school.",
+    name: "Bilal Combined School",
+    title: "",
+    company: "Bilal Combined School",
+    city: "Lenasia, Gauteng",
+    initials: "BC",
     color: "bg-primary-fixed text-primary",
   },
   {
     quote:
-      "As a private hospital, our hygiene standards are non-negotiable. Jimmo's medical-grade sanitation protocols give us complete peace of mind every single day.",
-    name: "Dr. Priya Naidoo",
-    title: "Hospital Manager",
-    company: "MedCity Private Hospital",
-    city: "Rosebank, Johannesburg",
-    initials: "PN",
+      "Excellent work done to maintain the masjid.",
+    name: "Masjid Bilal",
+    title: "",
+    company: "Masjid Bilal Lenasia South",
+    city: "Lenasia South, Gauteng",
+    initials: "MB",
     color: "bg-secondary-container text-on-secondary-container",
   },
   {
     quote:
-      "From our Pretoria head office to our Midrand distribution centre, Jimmo delivers a consistently pristine standard. Truly the best in Gauteng.",
-    name: "Liezel van der Merwe",
-    title: "Operations Manager",
-    company: "Harbour Point Holdings",
-    city: "Midrand, Gauteng",
-    initials: "LV",
+      "5 star service from Jimmo Cleaning — as a strategic partner they make project endings a breeze.",
+    name: "BuilditBros",
+    title: "",
+    company: "BuilditBros",
+    city: "Gauteng",
+    initials: "BB",
     color: "bg-tertiary-fixed text-tertiary",
   },
 ]
@@ -75,7 +75,7 @@ export default function Testimonials() {
                 </div>
                 <div>
                   <p className="font-headline font-bold text-on-surface text-sm">{name}</p>
-                  <p className="font-label text-xs text-on-surface-variant">{title}, {company}</p>
+                  <p className="font-label text-xs text-on-surface-variant">{title ? `${title}, ` : ''}{company}</p>
                   <p className="font-label text-xs text-outline mt-0.5">{city}</p>
                 </div>
               </div>
