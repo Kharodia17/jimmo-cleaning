@@ -56,7 +56,7 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             {/* WhatsApp link – desktop */}
             <a
-              href="https://wa.me/27651293014?text=Hi%20Jimmo!"
+              href="https://wa.me/27627643270?text=Hi%20Jimmo!"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden md:flex items-center gap-2 px-4 py-2.5 rounded-2xl font-label font-semibold text-sm border-2 border-[#25D366] text-[#25D366] hover:bg-[#25D366] hover:text-white transition-all duration-200"
@@ -144,7 +144,7 @@ export default function Navbar() {
             Get a Quote
           </Link>
           <a
-            href="https://wa.me/27651293014?text=Hi%20Jimmo!"
+            href="https://wa.me/27627643270?text=Hi%20Jimmo!"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full py-3 rounded-2xl font-headline font-semibold text-center flex items-center justify-center gap-2 border-2 border-[#25D366] text-[#25D366]"

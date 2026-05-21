@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-const WA_LINK = 'https://wa.me/27651293014?text=Hi%20Jimmo!%20I%27d%20like%20to%20get%20a%20quote.'
+const WA_LINK = 'https://wa.me/27627643270?text=Hi%20Jimmo!%20I%27d%20like%20to%20get%20a%20quote.'
 
 const WA_ICON = (
   <svg viewBox="0 0 32 32" className="w-5 h-5 fill-current">
