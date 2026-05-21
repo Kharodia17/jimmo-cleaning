@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const WA_NUMBER = '27795745177'
+const WA_NUMBER = '27651293014'
 const WA_MESSAGE = encodeURIComponent(
   "Hi Jimmo! I'd like to enquire about your cleaning services."
 )

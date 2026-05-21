@@ -51,7 +51,7 @@ const localBusinessSchema = {
       closes: '17:00',
     },
   ],
-  sameAs: ['https://wa.me/27795745177'],
+  sameAs: ['https://wa.me/27651293014'],
 }
 
 export default function App() {

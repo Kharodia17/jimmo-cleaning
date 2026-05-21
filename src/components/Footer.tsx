@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-const WA_LINK = 'https://wa.me/27795745177?text=Hi%20Jimmo!'
+const WA_LINK = 'https://wa.me/27651293014?text=Hi%20Jimmo!'
 
 export default function Footer() {
   return (
@@ -39,7 +39,7 @@ export default function Footer() {
             </p>
             <p className="flex items-center gap-2">
               <span className="material-symbols-outlined text-[#009BAA] text-base" style={{ fontVariationSettings: "'FILL' 1" }}>call</span>
-              011 211 0452 &nbsp;|&nbsp; 079 574 5177
+              065 129 3014 &nbsp;|&nbsp; 079 574 5177
             </p>
             <p className="flex items-center gap-2">
               <span className="material-symbols-outlined text-[#009BAA] text-base" style={{ fontVariationSettings: "'FILL' 1" }}>mail</span>

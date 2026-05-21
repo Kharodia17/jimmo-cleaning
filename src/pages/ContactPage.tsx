@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import emailjs from '@emailjs/browser'
 
-const WA_LINK = 'https://wa.me/27795745177?text=Hi%20Jimmo!%20I%27d%20like%20to%20get%20a%20quote.'
+const WA_LINK = 'https://wa.me/27651293014?text=Hi%20Jimmo!%20I%27d%20like%20to%20get%20a%20quote.'
 
 const EJS_SERVICE  = 'service_bz6xtip'
 const EJS_TEMPLATE = 'template_dyjxxvn'
@@ -176,7 +176,7 @@ export default function ContactPage() {
               },
               {
                 icon: 'call', iconBg: 'bg-secondary-container/30 text-secondary', label: 'Direct Line',
-                content: <div className="space-y-0.5"><p className="font-body text-on-surface font-medium text-lg">011 211 0452</p><p className="font-body text-on-surface-variant text-sm">079 574 5177 &nbsp;·&nbsp; 086 512 7677</p></div>,
+                content: <div className="space-y-0.5"><p className="font-body text-on-surface font-medium text-lg">065 129 3014</p><p className="font-body text-on-surface-variant text-sm">079 574 5177</p></div>,
               },
               {
                 icon: 'mail', iconBg: 'bg-tertiary-container/20 text-tertiary', label: 'Email Us',

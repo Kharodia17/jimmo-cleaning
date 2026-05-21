@@ -92,7 +92,7 @@ export default function HomePage() {
                 Get a Free Quote
               </Link>
               <a
-                href="https://wa.me/27795745177?text=Hi%20Jimmo!%20I%27d%20like%20to%20get%20a%20quote."
+                href="https://wa.me/27651293014?text=Hi%20Jimmo!%20I%27d%20like%20to%20get%20a%20quote."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-8 py-4 rounded-2xl font-headline font-bold text-lg border-2 border-[#25D366] text-[#25D366] hover:bg-[#25D366] hover:text-white transition-all duration-200"
